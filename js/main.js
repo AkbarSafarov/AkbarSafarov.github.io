@@ -429,40 +429,52 @@ $(function(){
 	let $body = $(document.body),
         $html = $(document.documentElement);
 
- //  function formPopup($btn,$wrap){
+  function formPopup($btn,$wrap){
 
- //    let closeForm = $('.formExtraWrapper .close-form'),
- //        formWrap = $($wrap),
- //        formBtn = $($btn),
- //        formOpened = 'opened',
- //        overflowHidden = 'oveflowHidden';
+    let closeForm = $('.formExtraWrapper .close-form'),
+        formWrap = $($wrap),
+        formBtn = $($btn),
+        formOpened = 'opened',
+        overflowHidden = 'oveflowHidden';
 
- //    closeForm.on('click', function() {
- //        formWrap.removeClass(formOpened);
- //        $html.removeClass(overflowHidden);
- //    });
- //    formBtn.on('click', function(event) {
- //        formWrap.addClass(formOpened);
- //        $html.toggleClass(overflowHidden);
- //        event.preventDefault();
- //    });
+    closeForm.on('click', function() {
+        formWrap.removeClass(formOpened);
+        $html.removeClass(overflowHidden);
+    });
+    formBtn.on('click', function(event) {
+        formWrap.addClass(formOpened);
+        $html.toggleClass(overflowHidden);
+        event.preventDefault();
+    });
 
- //    $html.on('keyup', function(event) {
- //        if (formWrap.hasClass(formOpened) && event.keyCode == 27) {
- //            formWrap.removeClass(formOpened);
- //            $html.removeClass(overflowHidden);
- //        }
- //    });
- //    $body.on('click touchstart', function(a) {
- //        if ($(a.target).closest('.formExtraWrapper').length || $(a.target).closest(formBtn).length) return;
- //        if (formWrap.hasClass(formOpened)) {
- //            formWrap.removeClass(formOpened);
- //            $html.removeClass(overflowHidden);
- //        }
- //    });
- //  }
+    $html.on('keyup', function(event) {
+        if (formWrap.hasClass(formOpened) && event.keyCode == 27) {
+            formWrap.removeClass(formOpened);
+            $html.removeClass(overflowHidden);
+        }
+    });
+    $body.on('click touchstart', function(a) {
+        if ($(a.target).closest('.formExtraWrapper').length || $(a.target).closest(formBtn).length) return;
+        if (formWrap.hasClass(formOpened)) {
+            formWrap.removeClass(formOpened);
+            $html.removeClass(overflowHidden);
+        }
+    });
+  }
 
-	// formPopup('.contacts_btn','.contacts_popup');
+	formPopup('.make_btn','.make_form');
+
+	formPopup('.review_btn','.review_form');
+
+	$('.review_form').find('.inputText').hide();
+
+	if ($('.doctor_inner').length) {
+		let doctorName = $('.doctor_inner h1').text();
+		
+		$('.review_form').find('.doctor_select').hide();
+		$('.review_form').find('.inputText').show();
+		$('.review_form').find('.inputText input').val(doctorName);
+	}
 })
 
 $(function(){

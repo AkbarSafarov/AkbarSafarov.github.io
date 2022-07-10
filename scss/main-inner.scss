@@ -31,13 +31,13 @@
 				@media all and (max-width: 767px) {
 					width: 	159px;
 					text-align: center;	
-					padding: 9px 15px;	
+					padding: 13px 15px;	
 				}
 
 				@media all and (max-width: 370px) {
 					width: 	148px;
 					text-align: center;	
-					padding: 9px 10px;	
+					padding: 13px 10px;	
 					font-size: 16px;	
 				}
 			}
@@ -101,7 +101,7 @@
         .block_inner {
         	position: relative;
 
-        	.btn_review {
+        	.review_btn {
         		@media all and (min-width: 1024px){
         			position: absolute;
 	        		top: 30px;
@@ -126,14 +126,19 @@
 			li {
 
 				@media all and (max-width: 767px) {
-					width: 	148px;
+					width: auto;
 					text-align: center;	
-					padding: 9px 10px;	
-					font-size: 16px;	
+					padding: 13px 16px;	
 				}
 			}
 		}
     }
+}
+
+.content_main_bg.services_page {
+	.tabs-wr-main {
+		overflow: hidden;
+	}
 }
 
 .reviews_list {
@@ -215,6 +220,7 @@
         @media all and (max-width: 767px){
             padding: 30px 24px;
             position: relative;
+            margin-bottom: 17px;
 
             .name {
                 padding-bottom: 15px;
@@ -440,7 +446,14 @@
 
 		@media all and (max-width: 767px) {
 			flex: 0 0 auto;
-			padding:  0 0 24px;
+			padding:  0 0 20px;
+		}
+
+		@media all and (max-width: 480px) {
+			img {
+				height: 204px;
+				object-fit: cover;
+			}
 		}
 	}
 }
@@ -656,7 +669,7 @@
 		}
 
 		@media all and (max-width: 579px){
-			margin: 0 0 20px;
+			margin: 0 0 36px;
 		}
 
 		img {
@@ -682,7 +695,7 @@
 
 			@media all and (max-width: 1000px){
 				font-size: 18px;
-				padding: 10px 0 4px;
+				padding: 10px 0 6px;
 			}
 		}
 
@@ -814,6 +827,10 @@
 	.btn {
 		display: inline-block;
 		padding: 12px 40px;
+
+		@media all and (max-width: 767px){
+			display: none;
+		}
 	}
 }
 
@@ -943,6 +960,10 @@
 
 .klinik_page {
 	padding-bottom: 32px;
+
+	@media all and (max-width: 767px) {
+		padding-bottom: 0;
+	}
 }
 
 .klinik_page_map{
