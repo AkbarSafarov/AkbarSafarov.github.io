@@ -277,6 +277,7 @@ $(function(){
 	    });
 	}
 
+	
 
     if ( window.matchMedia('(max-width : 767px)').matches ) {
 	    $('.more_text_body').each(function(){
@@ -288,8 +289,14 @@ $(function(){
 	    	}
 	    });
 	}
+	let heightBlockWr;
 
-	let heightBlockWr = $('.more_text_content').height();
+	if ($('.more_text_body').length) {
+		heightBlockWr = $('.more_text_body').height();
+	} else {
+		heightBlockWr = $('.more_text_content').height();
+	}
+	
 
 	$('.more_text_content').each(function(){
     	let heightB = $(this).height();
@@ -307,10 +314,11 @@ $(function(){
 	      	$(this).text('Показать весь текст');
 	      	$(this).prev().css('height', 200);
     	} else {
+    		console.log(heightBlockWr);
 	      	$(this).addClass('open');
 	      	$(this).prev().removeClass('hide_text');
 	      	$(this).text('Скрыть текст');
-	      	$(this).prev().css('height', heightBlockWr);
+	      	$(this).closest('.body').find('.more_text_body').css('height', heightBlockWr);
 	    }
     });
 

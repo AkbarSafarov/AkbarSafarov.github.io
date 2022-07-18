@@ -320,6 +320,7 @@ img, textarea, input, table {
         border-radius: 18px;
         position: relative;
         cursor: pointer;
+        color: #BDBDBD;
 
         .jq-selectbox__select-text {
             width: 100% !important;
@@ -349,6 +350,7 @@ img, textarea, input, table {
     }
 
     &.opened {
+        z-index: 101 !important;
 
         .jq-selectbox__select {
             border-radius: 18px 18px 0 0;
@@ -356,6 +358,12 @@ img, textarea, input, table {
             .jq-selectbox__trigger:before {
                 transform: rotate(180deg);
             }
+        }
+    }
+
+    &.changed {
+        .jq-selectbox__select {
+            color: #141515;
         }
     }
 
@@ -405,22 +413,32 @@ img, textarea, input, table {
     opacity: 0;
     visibility: hidden;
     font-size: 0;
+    overflow: hidden;
     box-shadow: 0 0 0 30000px rgba(0,0,0, .7);
+    background: rgba(0,0,0, .7);
 
-    &.opened {    
-        opacity: 1;
-        visibility: visible;
-    }
-
+    
     .menu_scroll {
         overflow: auto;
         position: absolute;
         top: 0;
-        left: 0;
         right: 0;
         bottom: 0; 
+        transform: translate3d(100%, 0, 0);
+        transition: all 0.5s;
+        width: 320px;
         background: #fff;padding-bottom: 20px;
     }
+
+    &.opened {    
+        opacity: 1;
+        visibility: visible;
+
+        .menu_scroll {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
 
     .search {
         margin: 0 16px;
@@ -436,6 +454,10 @@ img, textarea, input, table {
             width: 100%;
             border-radius: 20px;
             border: 1px solid #D9D9D9;
+
+            &:focus {
+                border-color: #BA70EA;
+            }
         }
 
         .btn_search {
@@ -1934,8 +1956,9 @@ ul {
             padding: 13px 16px;
             transition: all 0.3s;
 
-            @media all and (max-width: 360px){
+            @media all and (max-width: 480px){
                 margin-right: 12px;
+                padding: 13px 10px;
             }
 
             &:last-child {
@@ -2402,6 +2425,7 @@ ul {
 .more_text_body {
     position: relative;
     overflow: hidden;
+    margin-bottom: 20px;
 
     &.hide_text {
         height: 284px;
@@ -2639,6 +2663,7 @@ ul {
                             font-size: 16px;
                             line-height: 19px;
                             border-bottom: 1px solid #FFFFFF;
+                            border-radius: 0;
 
                             &::-webkit-input-placeholder {
                                 color: #EBFFF9;
@@ -4565,7 +4590,7 @@ ul {
     .field {
         flex: 0 0 calc(25% - 22px);
         position: relative;
-        z-index: 10;
+        //z-index: 10;
 
         @media all and (max-width: 767px){
             margin: 0 0 20px;
