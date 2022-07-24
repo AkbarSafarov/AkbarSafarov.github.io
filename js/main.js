@@ -71,7 +71,8 @@ $(function(){
 
     $('select').styler();
 
-    let $slider = $('.slider_block');
+    let $slider = $('.slider_block'),
+    	$sliderTextMain = $('.slider_text_main');
 
     if ($slider.find('.item').length > 1) {
         $slider.slick({
@@ -80,6 +81,18 @@ $(function(){
           arrows: true,
           autoplay: true,
   		  autoplaySpeed: 3000,
+  		  asNavFor: $sliderTextMain,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        });
+        $sliderTextMain.slick({
+          dots: false,
+          speed: 500,
+          fade: true,
+          arrows: false,
+          autoplay: true,
+  		  autoplaySpeed: 3000,
+  		  asNavFor: $slider,
           slidesToShow: 1,
           slidesToScroll: 1
         });
