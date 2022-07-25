@@ -327,11 +327,11 @@ $(function(){
 	      	$(this).text('Показать весь текст');
 	      	$(this).prev().css('height', 200);
     	} else {
-    		console.log(heightBlockWr);
 	      	$(this).addClass('open');
 	      	$(this).prev().removeClass('hide_text');
 	      	$(this).text('Скрыть текст');
 	      	$(this).closest('.body').find('.more_text_body').css('height', heightBlockWr);
+	      	$(this).closest('.block_inner').find('.more_text_content').css('height', heightBlockWr);
 	    }
     });
 
