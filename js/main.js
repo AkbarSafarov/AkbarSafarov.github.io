@@ -25,16 +25,19 @@ $(function(){
 
 	$('.production_inner').tabsBlock();
     $('.news_inner').tabsBlock();
+    $('.card_tabs .block_inner').tabsBlock();
+    $('.project_page_tabs').tabsBlock();
+    $('.catalog_list_tabs').tabsBlock();
 
-	$('.production_inner .tabs-title .btn').on('click', function(){
+	$('.production_inner .tabs-title .btn,.card_tabs .tabs-title .btn, .project_page_tabs .tabs-title .btn').on('click', function(){
 		if ( window.matchMedia('(max-width : 767px)').matches ) {
-			$('.production_inner .tabs-title').slideUp();
+			$('.production_inner .tabs-title,.card_tabs .tabs-title, .project_page_tabs .tabs-title').slideUp();
 		}
 		$('.select_dropdown').text($(this).text()).removeClass('active');
 	});
 
 	$('.select_dropdown').on('click', function(){
-		$('.production_inner .tabs-title').slideToggle();
+		$('.production_inner .tabs-title,.card_tabs .tabs-title, .project_page_tabs .tabs-title').slideToggle();
 		$(this).toggleClass('active');
 	});
 
@@ -58,23 +61,36 @@ $(function(){
     const $sliderMan = $('.human_slider');
 
     if ($slider.find('.item').length > 1) {
-        $slider.slick({
-          dots: true,
-          speed: 500,
-          arrows: false,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          fade: true
-        });
+    	if ($('.promo_page').length) {
+    		$slider.slick({
+	          dots: true,
+	          speed: 500,
+	          arrows: false,
+	          slidesToShow: 1,
+	          slidesToScroll: 1,
+	          fade: true
+	        });
+    	} else {
+	        $slider.slick({
+	          dots: true,
+	          speed: 500,
+	          arrows: false,
+	          slidesToShow: 1,
+	          slidesToScroll: 1,
+	          asNavFor: '.human_slider',
+	          fade: true
+	        });
 
-        $sliderMan.slick({
-          dots: false,
-          speed: 500,
-          arrows: false,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          fade: true
-        });
+	        $sliderMan.slick({
+	          dots: false,
+	          speed: 500,
+	          arrows: false,
+	          slidesToShow: 1,
+	          slidesToScroll: 1,
+	          asNavFor: '.slider_main',
+	          fade: true
+	        });
+	    }
     };
 
     const swiper = new Swiper(".mySwiper", {
@@ -101,14 +117,73 @@ $(function(){
 
     const lineSwiper = new Swiper(".slider_line", {
         slidesPerView: "auto",
-        spaceBetween: 20,
+        spaceBetween: 10,
         loopedSlides: 1,
-        loop: false
+        loop: false,
+        breakpoints: {
+          640: {
+            spaceBetween: 20,
+          }
+        }
     });
 
     const newsSwiper = new Swiper(".news_slider", {
         slidesPerView: "auto",
-        spaceBetween: 20,
+        spaceBetween: 10,
+        loop: true,
+        loopedSlides: 1,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            spaceBetween: 20,
+          }
+        }
+    });
+
+    const articleSwiper = new Swiper(".article_slider", {
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        loop: false,
+        loopedSlides: 1,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            spaceBetween: 20,
+          }
+        }
+    });
+
+    $('.swiper_arrow_btn.next_article').on('click', function(){
+    	$(this).closest('.article_block_wr').find('.swiper-button-prev').trigger('click');
+    })
+
+    $('.swiper_arrow_btn.prev').on('click', function(){
+    	$(this).closest('.tabs-b').find('.swiper-button-prev').trigger('click');
+    })
+
+    $('.swiper_arrow_btn.next').on('click', function(){
+    	$(this).closest('.tabs-b').find('.swiper-button-next').trigger('click');
+    })
+
+    const myswiper = new Swiper(".myProfSwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        autoHeight: true,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }
+    });
+
+    const myFactorySwiper = new Swiper(".myFactorySwiper", {
+        slidesPerView: "auto",
         loop: true,
         loopedSlides: 1,
         navigation: {
@@ -117,12 +192,51 @@ $(function(){
         }
     });
 
-    $('.swiper_arrow_btn.prev').on('click', function(){
-    	$(this).closest('.tabs-b').find('.swiper-button-prev').trigger('click');
-    })
+    const myhistoryswiper = new Swiper(".myHistorySwiper", {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        loop: false,
+        direction: "vertical",
+		navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+    });
 
-    $('.swiper_arrow_btn.next').on('click', function(){
-    	$(this).closest('.tabs-b').find('.swiper-button-next').trigger('click');
+    const projectSwiper = new Swiper(".projectSlider", {
+        slidesPerView: "auto",
+        loop: true,
+        loopedSlides: 1,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }
+    });
+
+    const recSwiper = new Swiper(".recommended_slider", {
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        loop: false,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            spaceBetween: 20,
+          }
+        }
+    });
+
+    $('.overview_block__list-item').each(function() {
+    	let video = $(this).find('.iframe_video');
+    	video.hide();
+    	$('.overview_block__list-item').removeClass('active');
+    	$(this).on('click', function() {
+    		$(this).addClass('active')
+    		$('.overview_block__left-video').html(video);
+    		$('.overview_block__left-video .iframe_video').show();
+    	})
     })
     
 
@@ -171,6 +285,8 @@ $(function(){
 	}
 
 	formPopup('.contacts_btn','.contacts_popup');
+
+	$('.select select').styler();
 })
 
 $(function(){
@@ -259,3 +375,107 @@ $(function(){
         });
     });
 })(document, window, 0);
+
+// card page 
+
+$(function(){
+
+	const $thumbSlider = $('.thumb_slider');
+    const $sliderBig = $('.big_image_slider');
+
+    if ($thumbSlider.find('.item').length > 1) {
+        $thumbSlider.slick({
+          dots: false,
+          speed: 500,
+          arrows: false,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          vertical: true,
+          asNavFor: '.big_image_slider',
+          infinite: false,
+          focusOnSelect: true,
+          responsive: [
+		    {
+		      breakpoint: 768,
+		      settings: {
+		      	vertical: false,
+		        slidesToShow: 4
+		      }
+		    }
+		  ]
+        });
+
+        $sliderBig.slick({
+          dots: false,
+          speed: 500,
+          arrows: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: false,
+          asNavFor: '.thumb_slider',
+          fade: true
+        });
+
+        $('.big_image_slider').lightGallery({
+        	selector: 'a',
+        	thumbnail: false,
+        	fullScreen: false,
+        	download: false,
+        	autoplay:false,
+        	autoplayControls: false,
+        	actualSize:false
+        });
+    };
+})
+
+$(function() {
+	const time = 2000;
+	const step = 25;
+
+	// function outNum(num, elem) {
+	//     let e = document.querySelector(elem);
+	//     n = 0;
+	//     let t = Math.round(time/(num/step));
+	//     let interval = setInterval(() => {
+	//         n = n + step;
+	//         if(n == num) {
+	//             clearInterval(interval);
+	//         }
+	//     	e.innerHTML = n;
+	//     	},
+	// 	t);
+	// };
+
+	// outNum(5475, '.company_numbers__right-number');
+
+	if ($('#myMap').length){
+		ymaps.ready(init)
+
+		function init() {
+			var myMap = new ymaps.Map("myMap", {
+				center: [54.850697, 82.949427],
+				zoom: 17,
+				controls: ['zoomControl']
+			})
+			var icon = '../img/map_m.svg'
+			var placemark = new ymaps.Placemark(myMap.getCenter(), {
+				// Зададим содержимое заголовка балуна.
+				balloonContentHeader: '<div class="balun_header">Адрес:</div>',
+				// Зададим содержимое основной части балуна.
+				balloonContentBody: '<div class="balun_body">ул.Варшавская 1</div>',
+			},
+			{
+		        iconLayout: 'default#image',
+		        // Custom image for the placemark icon.
+		        iconImageHref: icon,
+		        // The size of the placemark.
+		        iconImageSize: [70, 87],
+		    })
+
+			myMap.geoObjects.add(placemark)
+			//placemark.balloon.open()
+			myMap.behaviors.disable('scrollZoom')
+		}
+	}
+});
+
