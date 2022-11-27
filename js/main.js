@@ -287,6 +287,9 @@ $(function(){
 	formPopup('.contacts_btn','.contacts_popup');
 
 	$('.select select').styler();
+
+
+
 })
 
 $(function(){
@@ -346,6 +349,22 @@ $(function(){
         $(this).parents('li:first').toggleClass('hasSubmenu');
         return false;
     });
+
+   
+	if ($( ".datepicker_line_ins" ).length) {
+		$( ".datepicker_line_ins" ).each(function(){
+			let year = +$(this).data('year'),
+				month = +$(this).data('month');
+			$(this).datepicker({
+				changeMonth: false,
+			    changeYear: false,
+			    inline: false,
+			    defaultDate: new Date(year, month, 01)
+			});	
+		})
+	}
+
+
 });
 
 (function (document, window, index) {
