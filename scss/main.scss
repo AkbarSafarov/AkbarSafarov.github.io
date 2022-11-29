@@ -438,6 +438,7 @@ img, textarea, input, table {
         outline: none;
         font-family: $rc;
         transition: all 0.3s;
+        position: relative;
 
         .jq-selectbox__select-text {
             width: 100% !important;
@@ -445,6 +446,11 @@ img, textarea, input, table {
         }
 
         .jq-selectbox__trigger {
+            display: none;
+        }
+
+        &:after {
+            content: '';
             position: absolute;
             top: 0;
             bottom: 0;
@@ -460,7 +466,7 @@ img, textarea, input, table {
 
     &.opened {
         .jq-selectbox__select {
-            .jq-selectbox__trigger {
+            &:after {
                 transform: rotate(180deg);
             }
         }

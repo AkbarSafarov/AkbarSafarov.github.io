@@ -349,22 +349,6 @@ $(function(){
         $(this).parents('li:first').toggleClass('hasSubmenu');
         return false;
     });
-
-   
-	if ($( ".datepicker_line_ins" ).length) {
-		$( ".datepicker_line_ins" ).each(function(){
-			let year = +$(this).data('year'),
-				month = +$(this).data('month');
-			$(this).datepicker({
-				changeMonth: false,
-			    changeYear: false,
-			    inline: false,
-			    defaultDate: new Date(year, month, 01)
-			});	
-		})
-	}
-
-
 });
 
 (function (document, window, index) {
@@ -498,3 +482,76 @@ $(function() {
 	}
 });
 
+// calendar 
+
+$(function(){
+	if ($( ".datepicker_line_ins" ).length) {
+		let arrayDate = [];
+
+		$( ".datepicker_line_ins" ).each(function(){
+			let year = +$(this).data('year'),
+				month = +$(this).data('month');
+			$(this).datepicker({
+				range: 'multiple', // возможные значения: period, multiple
+				range_multiple_max: 10, // максимальное число выбранных дат в режиме "Несколько дат"
+				changeMonth: false,
+			    changeYear: false,
+			    inline: false,
+			    defaultDate: new Date(year, month, 01),
+			    onSelect: function(dateText, inst, extensionRange) {
+			      // extensionRange - объект расширения
+			      //$('[name=multipleDate]').val(extensionRange.datesText.join('\n'));
+			    }
+			});	
+
+			let nameMoth = $(this).find('.ui-datepicker-month').text();
+
+			arrayDate.push(nameMoth);
+		});
+
+		for (let i = 0; i < arrayDate.length; i++) {
+			if (i == 0) {
+				$('.select_date .select_name').text(arrayDate[i]);
+			}
+			$('.select_date .select_popup').append('<li>' + arrayDate[i] + '</li>');
+		}
+
+		$('.select_date .select_name').on('click', function(){
+			if ($(this).parent().hasClass('opened')){
+				$(this).parent().removeClass('opened')
+			} else {
+				$(this).parent().addClass('opened')
+			}
+		});
+
+		$(document).on('click touchstart', function(e){
+	        if( $(e.target).closest('.select_date .select_name').length || $(e.target).closest('.select_date .selectbox__dropdown').length) 
+	          return;
+	        if ($('.select_date').hasClass('opened')){
+	        	setTimeout(function(){
+	        		$('.select_date').removeClass('opened');
+	        	}, 500)
+	        }
+	    });
+
+	    $(document).on('click', '.select_popup li', function(event){
+	    	let $this = $(this);
+			let nameLi = $this.text(),
+				tabBlocks = $this.parents('.press_calendar_block').find('.inner .datepicker_line'),
+				tabActive = 'active',
+				target = $(event.target),
+				index = target.index();
+
+			$('.select_popup li').removeClass(tabActive);
+			target.addClass(tabActive);
+			$('.select_date .select_name').text(nameLi);
+
+			tabBlocks.removeClass(tabActive).eq(index).addClass(tabActive);
+		});
+
+		if ($('.ui-state-default').hasClass('ui-state-active')){
+			$('.ui-state-default').removeClass('ui-state-active')
+		}
+
+	}
+})
