@@ -755,6 +755,8 @@ img, textarea, input, table {
 .header {
     padding: 0 20px;
     background: #FBF9F9;
+    position: relative;
+    z-index: 20;
 
     @media all and (max-width: 999px) {
         background: $color2;
@@ -1187,6 +1189,35 @@ img, textarea, input, table {
                     visibility: visible;
                     margin-top: 0;
                 }
+            }
+        }
+    }
+}
+
+.main_page {
+    .header_wrapper {
+        position: relative;
+
+        .bg_slider {
+            position: absolute !important;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            .slick-list {
+                height: 100%;
+
+                .slick-track {
+                    height: 100%;
+                }
+            }
+
+            .item {
+                background-position: 50% 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: #fff;
             }
         }
     }
@@ -1845,10 +1876,6 @@ img, textarea, input, table {
         }
 
         .item {
-            background-position: 50% 100%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: #fff;
             padding: 0 20px 129px;
 
             @media all and (min-width: 768px) and (max-width: 1000px){
@@ -1968,7 +1995,7 @@ img, textarea, input, table {
     }
 
     .human_slider_wr {
-        position: absolute;
+        position: absolute !important;
         bottom: 0;
         right: 318px;
         width: 335px;
@@ -2709,6 +2736,15 @@ img, textarea, input, table {
     }
 }
 
+#scene4 {
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
 .news_block_wr {
     background: #EFEFEF;
     padding: 60px 20px 0;
@@ -3003,14 +3039,20 @@ img, textarea, input, table {
         }
 
         .firts_number {
-            flex: 0 0 430px;
+            flex: 0 0 446px;
 
             .number {
-                font-weight: 700;
-                font-size: 180px;
-                line-height: 100%;
-                color: $color1;
+                //white-space: nowrap;
                 padding-top: 12px;
+                overflow: hidden;
+
+                span {
+                    font-weight: 700;
+                    font-size: 180px;
+                    line-height: 100%;
+                    color: $color1;
+                    display: inline-block;
+                }
             }
 
             .name {
@@ -3022,10 +3064,16 @@ img, textarea, input, table {
             flex: 0 0 161px;
 
             .number {
-                font-weight: 700;
-                font-size: 70px;
-                line-height: 100%;
                 color: $color2;
+                white-space: nowrap;
+                overflow: hidden;
+
+                span {
+                    font-weight: 700;
+                    font-size: 70px;
+                    line-height: 100%;
+                    display: inline-block;
+                }
             }
         }
 
@@ -3059,7 +3107,10 @@ img, textarea, input, table {
             .item {
 
                 .number {
-                    font-size: 50px;
+                    
+                    span {
+                        font-size: 50px;
+                    }
                 }
             }
 
@@ -3071,7 +3122,9 @@ img, textarea, input, table {
             .firts_number {
 
                 .number {
-                    font-size: 100px;
+                    span {
+                         font-size: 100px;
+                    }
                 }
             }
         }
