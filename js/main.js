@@ -228,6 +228,31 @@ $(function(){
         }
     });
 
+    const certSwiper = new Swiper(".certificate_slider", {
+      slidesPerView: "auto",
+      spaceBetween: 10,
+      loop: false,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: {
+          spaceBetween: 20,
+        }
+      }
+    });
+
+    $('.certificate_slider').lightGallery({
+      selector: 'a',
+      thumbnail: false,
+      fullScreen: false,
+      download: false,
+      autoplay:false,
+      autoplayControls: false,
+      actualSize:false
+    });
+
     $('.overview_block__list-item').each(function() {
     	let video = $(this).find('.iframe_video');
     	video.hide();
