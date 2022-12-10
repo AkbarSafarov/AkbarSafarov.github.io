@@ -138,6 +138,7 @@ img, textarea, input, table {
 .site_wrapper {
    display: flex;
    flex-direction: column;
+   overflow: hidden;
 }
 
 *{
@@ -745,7 +746,7 @@ img, textarea, input, table {
         background: $color2;
 
         &:hover {
-            color: color2;
+            color: $color2;
             background: #fff;
         }
     }
@@ -933,7 +934,7 @@ img, textarea, input, table {
             align-items: start;
 
             .search_btn,.special_btn,.phone,.btn,.email, .lang_block {
-                display: none;
+                display: none !important;
             }
 
             .burger {
@@ -1540,6 +1541,18 @@ img, textarea, input, table {
                 }
             }
         }
+    }
+
+    .text {
+        bottom: 30px;
+        left: 20px;
+        right: 0;
+        position: absolute;
+        max-width: 160px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #110E0D;
     }
 }
 
@@ -2246,9 +2259,19 @@ img, textarea, input, table {
 
         .tabs-b {
             display: none;
-            width: 1550px;
+           margin-right: -15.4%;
 
-            @media all and (min-width: 768px) and (max-width: 1000px){
+            @media all and (min-width: 1360px) and (max-width: 1549px) {
+                width: auto;
+                margin-right: -10.4%;
+            }
+
+            @media all and (min-width: 1201px) and (max-width: 1359px) {
+                width: auto;
+                margin-right: -3.4%;
+            }
+
+            @media all and (min-width: 768px) and (max-width: 1200px){
                 width: auto;
                 margin-right: -20px;
             }
@@ -2848,6 +2871,16 @@ img, textarea, input, table {
             width: 1550px;
             padding-bottom: 58px;
 
+            @media all and (min-width: 1360px) and (max-width: 1549px) {
+                width: auto;
+                margin-right: -9.4%;
+            }
+
+            @media all and (min-width: 1201px) and (max-width: 1359px) {
+                width: auto;
+                margin-right: -3.4%;
+            }
+
             @media all and (max-width: 1200px){
                 width: auto;
                 margin-right: -20px;
@@ -3134,6 +3167,21 @@ img, textarea, input, table {
         margin-top: -68px;
         position: relative;
 
+        .name_map {
+            font-style: normal;
+            font-weight: 900;
+            font-size: 50px;
+            line-height: 100%;
+            color: #FFFFFF;
+            position: absolute;
+            top: 41%;
+            left: 29%;
+
+            @media all and (max-width: 1023px) {
+                display: none;
+            }
+        }
+
         @media all and (max-width: 1024px) {
             margin: -30px 0 0;
         }
@@ -3145,7 +3193,7 @@ img, textarea, input, table {
             cursor: pointer;
             background: url("data:image/svg+xml,%3Csvg width='52' height='52' viewBox='0 0 52 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M42.25 21.125C42.25 35.75 26 47.125 26 47.125C26 47.125 9.75 35.75 9.75 21.125C9.75 16.8152 11.462 12.682 14.5095 9.63451C17.557 6.58705 21.6902 4.875 26 4.875C30.3098 4.875 34.443 6.58705 37.4905 9.63451C40.538 12.682 42.25 16.8152 42.25 21.125V21.125Z' fill='%23110E0D'/%3E%3Cpath d='M26 27.625C29.5899 27.625 32.5 24.7149 32.5 21.125C32.5 17.5351 29.5899 14.625 26 14.625C22.4101 14.625 19.5 17.5351 19.5 21.125C19.5 24.7149 22.4101 27.625 26 27.625Z' fill='white' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 50% no-repeat;
 
-            @media all and (max-width: 1240px) {
+            @media all and (max-width: 1023px) {
                 display: none;
             }
 
@@ -3384,4 +3432,38 @@ img, textarea, input, table {
 }
 .slick-arrow.slick-hidden {
     display: none;
+}
+
+.ymaps-2-1-79-balloon {
+    box-shadow: none !important;
+}
+
+.ymaps-2-1-79-balloon__tail {
+    display: none !important;
+}
+
+.balun_header {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #110E0D;
+}
+
+.balun_body {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #110E0D;
+}
+
+.ymaps-2-1-79-balloon__content {
+    padding: 12px 17px !important;
+}
+
+.map_block_wr.company_numbers {
+    padding-bottom: 60px;
+
+    @media all and (max-width: 1023px) {
+        padding-bottom: 30px;
+    }
 }

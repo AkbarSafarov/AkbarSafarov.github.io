@@ -431,6 +431,9 @@ $color2: #110E0D;
     	position: relative;
     }
 
+    
+
+
     .tabs-title {
         padding: 0 0 40px;
         margin: 0;
@@ -493,6 +496,7 @@ $color2: #110E0D;
         display: none;
         padding: 13px 30px;
         color: #fff;
+        background: none;
 
         @media all and (max-width: 767px) {
             display: block;
@@ -712,9 +716,14 @@ $color2: #110E0D;
         width: 1550px;
         position: relative;
 
-        @media all and (max-width: 1600px) {
-        	width: auto;
-        	margin-right: -11%;
+        @media all and (min-width: 1360px) and (max-width: 1549px) {
+            width: auto;
+            margin-right: -9.4%;
+        }
+
+        @media all and (min-width: 1201px) and (max-width: 1359px) {
+            width: auto;
+            margin-right: -3.4%;
         }
 
         @media all and (max-width: 1200px){
@@ -2158,7 +2167,25 @@ $color2: #110E0D;
 // catalog-list-block
 .catalog_list_block {
 	padding: 0 20px;
-	overflow: hidden;
+	//overflow: hidden;
+
+	&.catalog_list_page {
+		position: relative;
+
+		&:before {
+			position: absolute;
+			content: '';
+			right: 0;
+			left: 0;	
+			bottom: 0;
+			height: 166px;
+			background: #000;
+
+			@media all and (max-width: 767px){
+				height: 200px;
+			}
+		}
+	}
 
 	.block_inner{
 		position: relative;
@@ -2169,16 +2196,7 @@ $color2: #110E0D;
 			position: relative;
 			z-index: 1;
 			box-sizing: border-box;
-			&:before {
-				position: absolute;
-				content: '';
-				right: -1000px;
-				left: -1000px;	
-				top: 0;
-				bottom: 0;
-				z-index: -1;
-				background: #000;
-			}
+			
 
 			.title {
 				font-weight: 700;
@@ -2192,6 +2210,7 @@ $color2: #110E0D;
 				.select {
 					margin-bottom: 0;
 					margin-right: 20px;
+					width: 300px;
 				}
 			}
 			@media all and (max-width: 767px) {
@@ -2203,6 +2222,7 @@ $color2: #110E0D;
 					.select {
 						margin-right: 0;
 						margin-bottom: 20px;
+						width: 100%;
 					}
 				}
 			}
@@ -2364,6 +2384,10 @@ $color2: #110E0D;
         	padding: 10px;
         	background: #fff;
         	position: relative;
+
+        	img {
+        		max-height: 188px;
+        	}
         }
 
         .name {
@@ -2394,7 +2418,7 @@ $color2: #110E0D;
             z-index: 1;
         }
 
-        @media all and (max-width: 767px) {
+        @media all and (max-width: 1023px) {
             width: calc(33.3% - 20px);
 
             .name {
@@ -2491,12 +2515,15 @@ $color2: #110E0D;
         text-align: left;
         font-size: 16px;
         font-weight: 400;
+
         @media all and (max-width: 767px) {
             display: block;
             margin-bottom: 20px;
             border-left: 0;
             border-top: 0;
             border-right: 0;
+            background: none;
+            
             &:after {
             	position: absolute;
             	right: 0;
@@ -3875,6 +3902,8 @@ $color2: #110E0D;
 	.header_wrapper {
 		background: #FBF9F9;
 
+		
+
 		.projects_main_block {
 			border: none;
 
@@ -3910,10 +3939,10 @@ $color2: #110E0D;
 
 	.project_page_main {
 
-		@media all and (max-width: 767px){
-			padding-left: 0;
-			padding-right: 0;
-		}
+		// @media all and (max-width: 767px){
+		// 	padding-left: 0;
+		// 	padding-right: 0;
+		// }
 
 		.block_inner {
 			gap: 20px;
@@ -4575,3 +4604,4 @@ $color2: #110E0D;
 		}
 	}
 }
+

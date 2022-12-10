@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Тайтл</title>
 <link rel="stylesheet" href="css/swiper-bundle.min.css">
 <link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" href="css/lightgallery.css">
 <link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/spes.css">
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/about.css">
 <link rel="stylesheet" href="css/main-styles.css">
 <script src="js/jquery.min.js"></script>
-<script src="js/swiper-bundle.min.js" async></script>
+<script src="js/swiper-bundle.min.js"></script>
 </head>
 <body>
 <div class="menu_burger">
@@ -60,7 +61,7 @@
 <div class="catalog_btn">Каталог</div>
 </div>
 <div class="search_btn"></div>
-<div class="special_btn">Версия для слабовидящих</div>
+<div class="special_btn specialButton">Версия для слабовидящих</div>
 <div class="email">
 <a href="mailto:info@mail.ru">info@mail.ru</a>
 </div>
@@ -160,7 +161,7 @@
 <div class="about_company__left">
 <div class="about_company__left-title">О компании</div>
 <div class="about_company__left-desc">Новосибирский завод изготовитель сельскохозяйственного оборудования</div>
-<div class="about_company__left-btn"></div>
+<div class="about_company__left-btn button_down"></div>
 </div>
 <div class="about_company__right">
 <div class="about_company__right-btn"></div>
@@ -211,7 +212,7 @@
 </div>
 </div>
 </div>
-<div class="slider_block_professional">
+<div class="slider_block_professional first_block_scroll">
 <div class="block_inner">
 <div class="slider_block_professional__items-wrap myProfSwiper swiper">
 <div class="swiper-wrapper">
@@ -299,7 +300,8 @@
 </div>
 <div class="map_image">
 <img src="files/map_image.png" alt="">
-<div class="point" style="top: 193px;left: 64px;">
+<div class="name_map">Россия</div>
+<div class="point" style="top: 26%;left: 6%;">
 <div class="name_point">Беларусь</div>
 <div class="point_text">
 <p>
@@ -314,7 +316,7 @@
 <p>Более 200 едениц оборудования в данном регионе</p>
 </div>
 </div>
-<div class="point" style="top: 220px;left: 220px;">
+<div class="point" style="top: 28%;left: 18%;">
 <div class="point_text">
 <p>
 <strong>Сибирский Федеральный Округ</strong>
@@ -328,7 +330,7 @@
 <p>Более 200 едениц оборудования в данном регионе</p>
 </div>
 </div>
-<div class="point" style="top: 270px;left: 627px;">
+<div class="point" style="top: 34%;left: 52%;">
 <div class="point_text">
 <p>
 <strong>Сибирский Федеральный Округ</strong>
@@ -342,7 +344,7 @@
 <p>Более 200 едениц оборудования в данном регионе</p>
 </div>
 </div>
-<div class="point" style="top: 240px;left: 870px;">
+<div class="point" style="top: 32%;left: 70%;">
 <div class="point_text">
 <p>
 <strong>Сибирский Федеральный Округ</strong>
@@ -356,7 +358,7 @@
 <p>Более 200 едениц оборудования в данном регионе</p>
 </div>
 </div>
-<div class="point" style="top: 489px;left: 312px;">
+<div class="point" style="top: 65%;left: 26%;">
 <div class="name_point">Казахстан</div>
 <div class="point_text">
 <p>
@@ -371,7 +373,7 @@
 <p>Более 200 едениц оборудования в данном регионе</p>
 </div>
 </div>
-<div class="point" style="top: 474px;left: 802px;">
+<div class="point" style="top: 63%;left: 67%;">
 <div class="point_text">
 <p>
 <strong>Сибирский Федеральный Округ</strong>
@@ -385,7 +387,7 @@
 <p>Более 200 едениц оборудования в данном регионе</p>
 </div>
 </div>
-<div class="point" style="top: 562px;left: 151px;">
+<div class="point" style="top: 73%;left: 13%;">
 <div class="name_point">Туркмения</div>
 <div class="point_text">
 <p>
@@ -400,7 +402,7 @@
 <p>Более 200 едениц оборудования в данном регионе</p>
 </div>
 </div>
-<div class="point" style="top: 601px;left: 226px;">
+<div class="point" style="top: 76%;left: 19%;">
 <div class="name_point">Узбекистан</div>
 <div class="point_text">
 <p>
@@ -415,7 +417,7 @@
 <p>Более 200 едениц оборудования в данном регионе</p>
 </div>
 </div>
-<div class="point" style="top: 654px;left: 274px;">
+<div class="point" style="top: 85%;left: 23%;">
 <div class="name_point">Таджикистан</div>
 <div class="point_text">
 <p>
@@ -430,7 +432,7 @@
 <p>Более 200 едениц оборудования в данном регионе</p>
 </div>
 </div>
-<div class="point" style="top: 627px;left: 340px;">
+<div class="point" style="top: 81%;left: 28%;">
 <div class="name_point">Киргизия</div>
 <div class="point_text">
 <p>
@@ -862,12 +864,13 @@
 </div>
 </footer>
 </div>
-<script src="js/jquery.parallax.min.js" async></script>
-<script src="js/wow.min.js" async></script>
-<script src="js/jquery.formstyler.min.js" async></script>
-<script src="js/lightgallery-all.min.js" async></script>
-<script src="js/jquery-ui.datepicker.js" async></script>
-<script src="js/jquery.datepicker.extension.range.min.js" async></script>
-<script src="js/main.js" async></script>
+<script src="js/jquery.parallax.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="js/lightgallery-all.min.js"></script>
+<script src="js/jquery-ui.datepicker.js"></script>
+<script src="js/jquery.datepicker.extension.range.min.js"></script>
+<script src="js/uhpv-full.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
