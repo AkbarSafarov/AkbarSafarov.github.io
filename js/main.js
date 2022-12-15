@@ -33,7 +33,7 @@ $(function(){
 		return false
 	})
 
-	//$('.production_inner').tabsBlock();
+	$('.promo_tab').tabsBlock();
     $('.news_inner').tabsBlock();
     $('.card_tabs .block_inner').tabsBlock();
     $('.project_page_tabs').tabsBlock();
@@ -343,35 +343,6 @@ $(document).ready(function() {
 	          fade: true
 	        });
     	} else {
-    		// $('.bg_slider').slick({
-	     //      dots: false,
-	     //      speed: 500,
-	     //      arrows: false,
-	     //      slidesToShow: 1,
-	     //      slidesToScroll: 1,
-	     //      asNavFor: '.slider_main',
-	     //      fade: true
-	     //    });
-
-	     //    $slider.slick({
-	     //      dots: true,
-	     //      speed: 500,
-	     //      arrows: false,
-	     //      slidesToShow: 1,
-	     //      slidesToScroll: 1,
-	     //      asNavFor: '.human_slider,.bg_slider',
-	     //      fade: true
-	     //    });
-
-	     //    $sliderMan.slick({
-	     //      dots: false,
-	     //      speed: 500,
-	     //      arrows: false,
-	     //      slidesToShow: 1,
-	     //      slidesToScroll: 1,
-	     //      asNavFor: '.slider_main',
-	     //      fade: true
-	     //    });
 
 		    var quoteSwiper = new Swiper('.human_slider',{
 		    	slidesPerView: "auto",
@@ -501,7 +472,6 @@ $(document).ready(function() {
     })
 
     $('.swiper_arrow_btn.prev').on('click', function(){
-    	console.log(123)
     	$(this).closest('.tabs-b').find('.swiper-button-prev').trigger('click');
     })
 
@@ -534,6 +504,8 @@ $(document).ready(function() {
         slidesPerView: 1,
         slidesPerGroup: 1,
         loop: false,
+        mousewheel: true,
+        speed: 1000,
         direction: "vertical",
 		navigation: {
           nextEl: ".swiper-button-next",
@@ -591,43 +563,40 @@ $(document).ready(function() {
       actualSize:false
     });
 
-	const $thumbSlider = $('.thumb_slider');
-    const $sliderBig = $('.big_image_slider');
+	const $thumbSlider = $('.slider__thumbs');
+    const $sliderBig = $('.slider__images');
 
     if ($thumbSlider.find('.item').length > 1) {
-        $thumbSlider.slick({
-          dots: false,
-          speed: 500,
-          arrows: false,
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          vertical: true,
-          asNavFor: '.big_image_slider',
-          infinite: false,
-          focusOnSelect: true,
-          responsive: [
-		    {
-		      breakpoint: 768,
-		      settings: {
-		      	vertical: false,
-		        slidesToShow: 4
-		      }
+		const sliderThumbs = new Swiper(".slider__thumbs .swiper-container", {
+		  direction: "vertical",
+		  slidesPerView: 4, // показывать по 3 превью
+		  spaceBetween: 15, // расстояние между слайдами
+		  freeMode: true, // при перетаскивании превью ведет себя как при скролле
+		  breakpoints: {
+		    0: {
+		      direction: "horizontal" // горизонтальная прокрутка
+		    },
+		    768: {
+		      // при 768px и выше
+		      direction: "vertical" // вертикальная прокрутка
 		    }
-		  ]
-        });
+		  }
+		});
+		const sliderImages = new Swiper(".slider__images .swiper-container", {
+		  slidesPerView: 1, 
+		  mousewheel: false, 
+		  navigation: {
+		    nextEl: ".slider__next",
+		    prevEl: ".slider__prev" 
+		  },
+		  effect: "fade",
+		  grabCursor: false, 
+		  thumbs: {
+		    swiper: sliderThumbs 
+		  }
+		});
 
-        $sliderBig.slick({
-          dots: false,
-          speed: 500,
-          arrows: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: false,
-          asNavFor: '.thumb_slider',
-          fade: true
-        });
-
-        $('.big_image_slider').lightGallery({
+        $('.slider__images').lightGallery({
         	selector: 'a',
         	thumbnail: false,
         	fullScreen: false,

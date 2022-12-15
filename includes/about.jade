@@ -395,58 +395,13 @@ include _header_about.jade
         <div class="title">Производство</div>
         <div class="production_inner">
             <div class="select_dropdown btn btn_select">Проектирование</div>
-            <ul class="tabs-title">
-                <li class="btn btn_black active"><span>Проектирование</span></li>
-                <li class="btn btn_black"><span>Изготовление</span></li>
-                <li class="btn btn_black"><span>Доставка</span></li>
-                <li class="btn btn_black"><span>Монтаж</span></li>
-            </ul>
+            <ul class="swiper-pagination_tab tabs-title"></ul>
             <div class="tabs-block">
-                <div class="tabs-b active">
-                    <div class="swiper mySwiper">
-                        <div class="swiper_arrow">
-                            <div class="swiper_arrow_btn swiper-button-prev"></div>
-                            <div class="swiper_arrow_btn swiper-button-next"></div>
-                        </div>
-                        <div class="swiper-wrapper">
-                            <div class="item swiper-slide">
-                                <div class="left">
-                                    <img src="files/p_slid.jpg" alt="">
-                                </div>
-                                <div class="right">
-                                    <div class="name">Проектирование</div>
-                                    <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-                                    <a href="" class="link">Подробнее</a>
-                                </div>
-                            </div>
-                            <div class="item swiper-slide">
-                                <div class="left">
-                                    <img src="files/p_slid.jpg" alt="">
-                                </div>
-                                <div class="right">
-                                    <div class="name">Проектирование</div>
-                                    <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-                                    <a href="" class="link">Подробнее</a>
-                                </div>
-                            </div>
-                            <div class="item swiper-slide">
-                                <div class="left">
-                                    <img src="files/p_slid.jpg" alt="">
-                                </div>
-                                <div class="right">
-                                    <div class="name">Проектирование</div>
-                                    <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-                                    <a href="" class="link">Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="tabs-b">
-                    <div class="swiper mySwiper">
+                    <div class="swiper mySwiper" data-id="mySwiper">
                         <div class="swiper_arrow">
-                            <div class="swiper_arrow_btn swiper-button-prev"></div>
-                            <div class="swiper_arrow_btn swiper-button-next"></div>
+                            <div class="swiper_arrow_btn swiper-button-prev" data-prev="swiper-button-prev"></div>
+                            <div class="swiper_arrow_btn swiper-button-next" data-next="swiper-button-next"></div>
                         </div>
                         <div class="swiper-wrapper">
                             <div class="item swiper-slide">
@@ -454,7 +409,7 @@ include _header_about.jade
                                     <img src="files/p_slid.jpg" alt="">
                                 </div>
                                 <div class="right">
-                                    <div class="name">Изготовление</div>
+                                    <div class="name slide-title">Проектирование</div>
                                     <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
                                     <a href="" class="link">Подробнее</a>
                                 </div>
@@ -464,7 +419,7 @@ include _header_about.jade
                                     <img src="files/p_slid.jpg" alt="">
                                 </div>
                                 <div class="right">
-                                    <div class="name">Изготовление</div>
+                                    <div class="name slide-title">Изготовление</div>
                                     <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
                                     <a href="" class="link">Подробнее</a>
                                 </div>
@@ -474,27 +429,7 @@ include _header_about.jade
                                     <img src="files/p_slid.jpg" alt="">
                                 </div>
                                 <div class="right">
-                                    <div class="name">Изготовление</div>
-                                    <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-                                    <a href="" class="link">Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tabs-b">
-                    <div class="swiper mySwiper">
-                        <div class="swiper_arrow">
-                            <div class="swiper_arrow_btn swiper-button-prev"></div>
-                            <div class="swiper_arrow_btn swiper-button-next"></div>
-                        </div>
-                        <div class="swiper-wrapper">
-                            <div class="item swiper-slide">
-                                <div class="left">
-                                    <img src="files/p_slid.jpg" alt="">
-                                </div>
-                                <div class="right">
-                                    <div class="name">Монтаж</div>
+                                    <div class="name slide-title">Доставка</div>
                                     <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
                                     <a href="" class="link">Подробнее</a>
                                 </div>
@@ -504,57 +439,7 @@ include _header_about.jade
                                     <img src="files/p_slid.jpg" alt="">
                                 </div>
                                 <div class="right">
-                                    <div class="name">Монтаж</div>
-                                    <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-                                    <a href="" class="link">Подробнее</a>
-                                </div>
-                            </div>
-                            <div class="item swiper-slide">
-                                <div class="left">
-                                    <img src="files/p_slid.jpg" alt="">
-                                </div>
-                                <div class="right">
-                                    <div class="name">Монтаж</div>
-                                    <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-                                    <a href="" class="link">Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tabs-b">
-                    <div class="swiper mySwiper">
-                        <div class="swiper_arrow">
-                            <div class="swiper_arrow_btn swiper-button-prev"></div>
-                            <div class="swiper_arrow_btn swiper-button-next"></div>
-                        </div>
-                        <div class="swiper-wrapper">
-                            <div class="item swiper-slide">
-                                <div class="left">
-                                    <img src="files/p_slid.jpg" alt="">
-                                </div>
-                                <div class="right">
-                                    <div class="name">Проектирование</div>
-                                    <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-                                    <a href="" class="link">Подробнее</a>
-                                </div>
-                            </div>
-                            <div class="item swiper-slide">
-                                <div class="left">
-                                    <img src="files/p_slid.jpg" alt="">
-                                </div>
-                                <div class="right">
-                                    <div class="name">Проектирование</div>
-                                    <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-                                    <a href="" class="link">Подробнее</a>
-                                </div>
-                            </div>
-                            <div class="item swiper-slide">
-                                <div class="left">
-                                    <img src="files/p_slid.jpg" alt="">
-                                </div>
-                                <div class="right">
-                                    <div class="name">Проектирование</div>
+                                    <div class="name slide-title">Монтаж</div>
                                     <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
                                     <a href="" class="link">Подробнее</a>
                                 </div>
@@ -581,39 +466,39 @@ include _header_about.jade
                         <div class="swiper_arrow_btn next"></div>
                     </div>
                     <div class="slider_wr">
-                        <div class="swiper_arrow_btn swiper-button-prev"></div>
-                        <div class="swiper_arrow_btn swiper-button-next"></div>
-                        <div class="swiper news_slider">
+                        <div class="swiper_arrow_btn swiper-button-prev" data-prev="swiper-button-prev"></div>
+                        <div class="swiper_arrow_btn swiper-button-next" data-next="swiper-button-next"></div>
+                        <div class="swiper news_slider"  data-id="news_slider">
                             <div class="swiper-wrapper">
-                                <a class="item swiper-slide" style="background-image: url(files/new1.jpg);">
+                                <a href="" class="item swiper-slide" style="background-image: url(files/new1.jpg);">
                                     <div class="name">Первая новость компании</div>
                                     <div class="bottom">
                                         <div class="mounth_year">cен <br>2022</div>
                                         <div class="day">22</div>
                                     </div>
                                 </a>
-                                <a class="item swiper-slide" style="background-image: url(files/new1.jpg);">
+                                <a href="" class="item swiper-slide" style="background-image: url(files/new1.jpg);">
                                     <div class="name">Первая новость компании</div>
                                     <div class="bottom">
                                         <div class="mounth_year">cен <br>2022</div>
                                         <div class="day">22</div>
                                     </div>
                                 </a>
-                                <a class="item swiper-slide" style="background-image: url(files/new1.jpg);">
+                                <a href="" class="item swiper-slide" style="background-image: url(files/new1.jpg);">
                                     <div class="name">Первая новость компании</div>
                                     <div class="bottom">
                                         <div class="mounth_year">cен <br>2022</div>
                                         <div class="day">22</div>
                                     </div>
                                 </a>
-                                <a class="item swiper-slide" style="background-image: url(files/new1.jpg);">
+                                <a href="" class="item swiper-slide" style="background-image: url(files/new1.jpg);">
                                     <div class="name">Первая новость компании</div>
                                     <div class="bottom">
                                         <div class="mounth_year">cен <br>2022</div>
                                         <div class="day">22</div>
                                     </div>
                                 </a>
-                                <a class="item swiper-slide" style="background-image: url(files/new1.jpg);">
+                                <a href="" class="item swiper-slide" style="background-image: url(files/new1.jpg);">
                                     <div class="name">Первая новость компании</div>
                                     <div class="bottom">
                                         <div class="mounth_year">cен <br>2022</div>
@@ -625,10 +510,51 @@ include _header_about.jade
                     </div>
                 </div>
                 <div class="tabs-b">
-                    <div class="swiper mySwiper">
-                        <div class="swiper_arrow">
-                            <div class="swiper_arrow_btn swiper-button-prev"></div>
-                            <div class="swiper_arrow_btn swiper-button-next"></div>
+                    <div class="swiper_arrow">
+                        <div class="swiper_arrow_btn prev"></div>
+                        <div class="swiper_arrow_btn next"></div>
+                    </div>
+                    <div class="slider_wr">
+                        <div class="swiper_arrow_btn swiper-button-prev" data-prev="swiper-button-prev"></div>
+                        <div class="swiper_arrow_btn swiper-button-next" data-next="swiper-button-next"></div>
+                        <div class="swiper news_slider" data-id="news_slider">
+                            <div class="swiper-wrapper">
+                                <a href="" class="item swiper-slide" style="background-image: url(files/new1.jpg);">
+                                    <div class="name">Первая новость компании</div>
+                                    <div class="bottom">
+                                        <div class="mounth_year">cен <br>2022</div>
+                                        <div class="day">22</div>
+                                    </div>
+                                </a>
+                                <a href="" class="item swiper-slide" style="background-image: url(files/new1.jpg);">
+                                    <div class="name">Первая новость компании</div>
+                                    <div class="bottom">
+                                        <div class="mounth_year">cен <br>2022</div>
+                                        <div class="day">22</div>
+                                    </div>
+                                </a>
+                                <a href="" class="item swiper-slide" style="background-image: url(files/new1.jpg);">
+                                    <div class="name">Первая новость компании</div>
+                                    <div class="bottom">
+                                        <div class="mounth_year">cен <br>2022</div>
+                                        <div class="day">22</div>
+                                    </div>
+                                </a>
+                                <a href="" class="item swiper-slide" style="background-image: url(files/new1.jpg);">
+                                    <div class="name">Первая новость компании</div>
+                                    <div class="bottom">
+                                        <div class="mounth_year">cен <br>2022</div>
+                                        <div class="day">22</div>
+                                    </div>
+                                </a>
+                                <a href="" class="item swiper-slide" style="background-image: url(files/new1.jpg);">
+                                    <div class="name">Первая новость компании</div>
+                                    <div class="bottom">
+                                        <div class="mounth_year">cен <br>2022</div>
+                                        <div class="day">22</div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

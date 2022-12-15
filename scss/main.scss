@@ -421,6 +421,7 @@ img, textarea, input, table {
 .jq-selectbox.jqselect {
     display: block !important;
     width: 100%;
+    z-index: 30 !important;
 
     .jq-selectbox__select {
         width: 100%;
@@ -1241,13 +1242,99 @@ img, textarea, input, table {
     }
 }
 
+.project_page {
+
+    .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .header_wrapper {
+        padding-top: 190px;
+
+        @media all and (max-width: 1180px) {
+            padding-top: 80px;
+        }
+    }
+}
+
+.promo_page {
+
+    .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .content_block_wr {
+        padding-top: 190px;
+
+        @media all and (max-width: 1180px) {
+            padding-top: 80px;
+        }
+    }
+}
+
+.vacant_page {
+
+    .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .header_wrapper {
+        padding-top: 190px;
+
+        @media all and (max-width: 1180px) {
+            padding-top: 80px;
+        }
+    }
+}
+
+.header_bg,.info_page {
+    .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .header_wrapper {
+        padding-top: 190px;
+
+        @media all and (max-width: 1180px) {
+            padding-top: 80px;
+        }
+    }
+}
+
+.page_inner_wrap {
+    padding-top: 190px;
+
+    @media all and (max-width: 1180px) {
+        padding-top: 80px;
+    }
+
+    .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
 .header {
     &.about_black {
         background: rgba(17, 14, 13, 0.92);
     }
 
     &.black {
-        background: $color2;
+        background: $color2 !important;
     }
 
     &.fixed {
@@ -1258,7 +1345,15 @@ img, textarea, input, table {
         z-index: 40;
 
         @media all and (min-width: 1001px) {
-            background: #fff;
+            background: #fff !important;
+        }
+
+        &.black {
+            background: $color2 !important;
+        }
+
+        &.about_black {
+            background: rgba(17, 14, 13, 0.92) !important;
         }
 
         .header_top {
