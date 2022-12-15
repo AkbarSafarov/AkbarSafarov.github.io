@@ -23,6 +23,16 @@ $.fn.tabsBlock = function(){
 
 $(function(){
 
+	var link_top = $('.up_link');
+	var root = $('html, body');
+
+	link_top.on('click', function(){
+		if (!root.is(':animated')) {
+			root.animate({'scrollTop':0}, 700);
+		}
+		return false
+	})
+
 	$('.production_inner').tabsBlock();
     $('.news_inner').tabsBlock();
     $('.card_tabs .block_inner').tabsBlock();
@@ -295,35 +305,56 @@ $(document).ready(function() {
 	          fade: true
 	        });
     	} else {
-    		$('.bg_slider').slick({
-	          dots: false,
-	          speed: 500,
-	          arrows: false,
-	          slidesToShow: 1,
-	          slidesToScroll: 1,
-	          asNavFor: '.slider_main',
-	          fade: true
-	        });
+    		// $('.bg_slider').slick({
+	     //      dots: false,
+	     //      speed: 500,
+	     //      arrows: false,
+	     //      slidesToShow: 1,
+	     //      slidesToScroll: 1,
+	     //      asNavFor: '.slider_main',
+	     //      fade: true
+	     //    });
 
-	        $slider.slick({
-	          dots: true,
-	          speed: 500,
-	          arrows: false,
-	          slidesToShow: 1,
-	          slidesToScroll: 1,
-	          asNavFor: '.human_slider,.bg_slider',
-	          fade: true
-	        });
+	     //    $slider.slick({
+	     //      dots: true,
+	     //      speed: 500,
+	     //      arrows: false,
+	     //      slidesToShow: 1,
+	     //      slidesToScroll: 1,
+	     //      asNavFor: '.human_slider,.bg_slider',
+	     //      fade: true
+	     //    });
 
-	        $sliderMan.slick({
-	          dots: false,
-	          speed: 500,
-	          arrows: false,
-	          slidesToShow: 1,
-	          slidesToScroll: 1,
-	          asNavFor: '.slider_main',
-	          fade: true
-	        });
+	     //    $sliderMan.slick({
+	     //      dots: false,
+	     //      speed: 500,
+	     //      arrows: false,
+	     //      slidesToShow: 1,
+	     //      slidesToScroll: 1,
+	     //      asNavFor: '.slider_main',
+	     //      fade: true
+	     //    });
+
+		    var quoteSwiper = new Swiper('.human_slider',{
+		    	slidesPerView: "auto",
+		        spaceBetween: 0,
+		        loop: true,
+		        loopedSlides: 1,
+		        effect: "fade",
+		    });
+		    var imageSwiper = new Swiper('.slider_main', {
+		    	slidesPerView: "auto",
+		        spaceBetween: 0,
+		        loop: true,
+		        loopedSlides: 1,
+		        effect: "fade",
+		       	navigation: {
+		          nextEl: ".swiper-main-button-next",
+		          prevEl: ".swiper-main-button-prev",
+		        }
+		    });
+		    quoteSwiper.controller.control = imageSwiper;
+		    imageSwiper.controller.control = quoteSwiper;
 	    }
     };
 
@@ -636,46 +667,15 @@ $(document).ready(function() {
 		var scene = document.getElementById('scene');
 		var scene2 = document.getElementById('scene2');
 		var scene3 = document.getElementById('scene3');
-		var parallaxInstance = new Parallax(scene);
-		var parallaxInstance2 = new Parallax(scene2);
-		var parallaxInstance3 = new Parallax(scene3);
+		new Parallax(scene);
+		new Parallax(scene2);
+		new Parallax(scene3);
 	}
 })
 
 
 
 $(function() {
-
-	// var time = 2,
-	//   	cc = 1;
-	// $(window).scroll(function() {
-
-	//     $('#counter').each(function() {
-	//         var cPos = $(this).offset().top,
-	//             topWindow = $(window).scrollTop();
-	//         if (cPos < topWindow + 200) {
-	//             if (cc < 2) {
-	//                 $(".number").addClass("viz");
-	//                 $('div').each(function() {
-	//                     var
-	//                         i = 10,
-	//                         num = $(this).data('num'),
-	//                         step = 1000 * time / num,
-	//                         that = $(this),
-	//                         int = setInterval(function() {
-	//                             if (i <= num) {
-	//                                 that.html(i);
-	//                             } else {
-	//                                 cc = cc + 2;
-	//                                 clearInterval(int);
-	//                             }
-	//                             i++;
-	//                         }, step);
-	//                 });
-	//             }
-	//         }
-	//     });
-	// });
 
 	wow = new WOW(
       {
