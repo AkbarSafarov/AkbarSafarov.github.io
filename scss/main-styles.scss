@@ -4677,10 +4677,74 @@ $color2: #110E0D;
     }
 }
 
+.search_result_list {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	padding: 13px 11px;
+	margin: 8px 0 0;
+	list-style: none;
+	width: 279px;
+	background: #fff;
+	z-index: 51;
+	border: 1px solid #110E0D;
+	border-top: none;
+	display: none;
+
+	@media all and (max-width: 1180px) {
+		width: 312px;
+		right: auto;
+		left: 0;
+		background: $color2;
+	}
+
+	li {
+
+		a {
+			display: inline-block;
+			vertical-align: top;
+			padding: 10px 0;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 100%;
+			color: $color2;
+			text-decoration: none;
+
+			&:hover {
+				color: $color1;
+			}
+
+			@media all and (max-width: 1180px) {
+				color: $color1;
+			}
+		}
+	}
+}
+
 .menu_burger .panel_action .search_btn {
 	.search_form {
 		right: auto;
 		left: 0;
+		background: $color2;
+
+		.sear_btn {
+			background: url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.60938 14.8438C12.0525 14.8438 14.8438 12.0525 14.8438 8.60938C14.8438 5.16622 12.0525 2.375 8.60938 2.375C5.16622 2.375 2.375 5.16622 2.375 8.60938C2.375 12.0525 5.16622 14.8438 8.60938 14.8438Z' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.0176 13.0181L16.6247 16.6251' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 50% no-repeat;
+		}
+
+		.sear_text {
+			background: none;
+			color: #fff;
+
+			&:-webkit-input-placeholder{
+            	color: #fff;
+            }
+		}
+
+		input::-webkit-input-placeholder {
+			color: #fff;
+		}
+
 	}
 }
 
