@@ -59,7 +59,12 @@
 <div class="header_btn">
 <div class="catalog_btn">Каталог</div>
 </div>
-<div class="search_btn"></div>
+<div class="search_btn">
+<div class="search_form">
+<input type="submit" class="sear_btn">
+<input type="text" placeholder="Введеный запрос поиска" class="sear_text">
+</div>
+</div>
 <div class="special_btn specialButton">Версия для слабовидящих</div>
 <div class="email">
 <a href="mailto:info@mail.ru">info@mail.ru</a>
@@ -238,53 +243,8 @@
 <div class="title">Производство</div>
 <div class="production_inner">
 <div class="select_dropdown btn btn_select">Проектирование</div>
-<ul class="tabs-title">
-<li class="btn btn_black active"><span>Проектирование</span></li>
-<li class="btn btn_black"><span>Изготовление</span></li>
-<li class="btn btn_black"><span>Доставка</span></li>
-<li class="btn btn_black"><span>Монтаж</span></li>
-</ul>
+<ul class="swiper-pagination_tab tabs-title"></ul>
 <div class="tabs-block">
-<div class="tabs-b active">
-<div class="swiper mySwiper" data-id="mySwiper">
-<div class="swiper_arrow">
-<div class="swiper_arrow_btn swiper-button-prev" data-prev="swiper-button-prev"></div>
-<div class="swiper_arrow_btn swiper-button-next" data-next="swiper-button-next"></div>
-</div>
-<div class="swiper-wrapper">
-<div class="item swiper-slide">
-<div class="left">
-<img src="files/p_slid.jpg" alt="">
-</div>
-<div class="right">
-<div class="name">Проектирование</div>
-<div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-<a href="" class="link">Подробнее</a>
-</div>
-</div>
-<div class="item swiper-slide">
-<div class="left">
-<img src="files/p_slid.jpg" alt="">
-</div>
-<div class="right">
-<div class="name">Проектирование</div>
-<div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-<a href="" class="link">Подробнее</a>
-</div>
-</div>
-<div class="item swiper-slide">
-<div class="left">
-<img src="files/p_slid.jpg" alt="">
-</div>
-<div class="right">
-<div class="name">Проектирование</div>
-<div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-<a href="" class="link">Подробнее</a>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="tabs-b">
 <div class="swiper mySwiper" data-id="mySwiper">
 <div class="swiper_arrow">
@@ -297,7 +257,7 @@
 <img src="files/p_slid.jpg" alt="">
 </div>
 <div class="right">
-<div class="name">Проектирование</div>
+<div class="name slide-title">Проектирование</div>
 <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
 <a href="" class="link">Подробнее</a>
 </div>
@@ -307,7 +267,7 @@
 <img src="files/p_slid.jpg" alt="">
 </div>
 <div class="right">
-<div class="name">Проектирование</div>
+<div class="name slide-title">Изготовление</div>
 <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
 <a href="" class="link">Подробнее</a>
 </div>
@@ -317,27 +277,7 @@
 <img src="files/p_slid.jpg" alt="">
 </div>
 <div class="right">
-<div class="name">Проектирование</div>
-<div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-<a href="" class="link">Подробнее</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="tabs-b">
-<div class="swiper mySwiper" data-id="mySwiper">
-<div class="swiper_arrow">
-<div class="swiper_arrow_btn swiper-button-prev" data-prev="swiper-button-prev"></div>
-<div class="swiper_arrow_btn swiper-button-next" data-next="swiper-button-next"></div>
-</div>
-<div class="swiper-wrapper">
-<div class="item swiper-slide">
-<div class="left">
-<img src="files/p_slid.jpg" alt="">
-</div>
-<div class="right">
-<div class="name">Проектирование</div>
+<div class="name slide-title">Доставка</div>
 <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
 <a href="" class="link">Подробнее</a>
 </div>
@@ -347,57 +287,7 @@
 <img src="files/p_slid.jpg" alt="">
 </div>
 <div class="right">
-<div class="name">Проектирование</div>
-<div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-<a href="" class="link">Подробнее</a>
-</div>
-</div>
-<div class="item swiper-slide">
-<div class="left">
-<img src="files/p_slid.jpg" alt="">
-</div>
-<div class="right">
-<div class="name">Проектирование</div>
-<div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-<a href="" class="link">Подробнее</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="tabs-b">
-<div class="swiper mySwiper" data-id="mySwiper">
-<div class="swiper_arrow">
-<div class="swiper_arrow_btn swiper-button-prev" data-prev="swiper-button-prev"></div>
-<div class="swiper_arrow_btn swiper-button-next" data-next="swiper-button-next"></div>
-</div>
-<div class="swiper-wrapper">
-<div class="item swiper-slide">
-<div class="left">
-<img src="files/p_slid.jpg" alt="">
-</div>
-<div class="right">
-<div class="name">Проектирование</div>
-<div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-<a href="" class="link">Подробнее</a>
-</div>
-</div>
-<div class="item swiper-slide">
-<div class="left">
-<img src="files/p_slid.jpg" alt="">
-</div>
-<div class="right">
-<div class="name">Проектирование</div>
-<div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-<a href="" class="link">Подробнее</a>
-</div>
-</div>
-<div class="item swiper-slide">
-<div class="left">
-<img src="files/p_slid.jpg" alt="">
-</div>
-<div class="right">
-<div class="name">Проектирование</div>
+<div class="name slide-title">Монтаж</div>
 <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
 <a href="" class="link">Подробнее</a>
 </div>
