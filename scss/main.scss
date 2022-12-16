@@ -1205,7 +1205,6 @@ img, textarea, input, table {
 .main_page {
 
     .header {
-        position: absolute;
         top: 0;
         left: 0;
         right: 0;
@@ -1249,10 +1248,13 @@ img, textarea, input, table {
     }
 }
 
+.header {
+    position: fixed;
+}
+
 .project_page {
 
     .header {
-        position: absolute;
         top: 0;
         left: 0;
         right: 0;
@@ -1267,10 +1269,17 @@ img, textarea, input, table {
     }
 }
 
+.page_inner_wrapper {
+    padding-top: 190px;
+
+    @media all and (max-width: 1180px) {
+        padding-top: 50px;
+    }
+}
+
 .promo_page {
 
     .header {
-        position: absolute;
         top: 0;
         left: 0;
         right: 0;
@@ -1288,7 +1297,6 @@ img, textarea, input, table {
 .vacant_page {
 
     .header {
-        position: absolute;
         top: 0;
         left: 0;
         right: 0;
@@ -1305,7 +1313,6 @@ img, textarea, input, table {
 
 .header_bg,.info_page {
     .header {
-        position: absolute;
         top: 0;
         left: 0;
         right: 0;
@@ -1328,7 +1335,6 @@ img, textarea, input, table {
     }
 
     .header {
-        position: absolute;
         top: 0;
         left: 0;
         right: 0;
