@@ -734,7 +734,7 @@ $(function() {
 	if ($('.button_down').length) {
 		$('.button_down').on('click', function() {
 			$('html, body').animate({
-				scrollTop: $(".first_block_scroll").offset().top // класс объекта к которому приезжаем
+				scrollTop: $(".first_block_scroll").offset().top - 141
 			}, 1000); // Скорость прокрутки
 		});
 	}

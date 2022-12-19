@@ -767,16 +767,22 @@ img, textarea, input, table {
     .header_top {
         padding: 27px 0 40px;
         display: flex;
-        align-items: center;        
+        align-items: center;   
+        transition: all 0.3s;     
 
         .logo {
             flex: 0 0 135px;
             margin-right: 24px;
+            transition: all 0.3s;
 
             a {
                 display: inline-block;
                 vertical-align: top;
                 text-decoration: none;
+
+                svg {
+                    transition: all 0.3s;
+                }
             }
         }
 
@@ -1202,9 +1208,17 @@ img, textarea, input, table {
     }
 }
 
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
 .main_page {
 
     .header {
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
@@ -1266,6 +1280,14 @@ img, textarea, input, table {
         @media all and (max-width: 1180px) {
             padding-top: 80px;
         }
+    }
+}
+
+.content_block_wr.about_head {
+    padding-top: 190px;
+
+    @media all and (max-width: 1180px) {
+        padding-top: 80px;
     }
 }
 
@@ -1343,7 +1365,7 @@ img, textarea, input, table {
 
 .header {
     &.about_black {
-        background: rgba(17, 14, 13, 0.92);
+        background: none;
     }
 
     &.black {
@@ -1763,6 +1785,7 @@ img, textarea, input, table {
             .logo {
                 max-width: 162px;
                 margin-bottom: 35px;
+                transition: all 0.5s;
 
                 a {
                     display: inline-block;
