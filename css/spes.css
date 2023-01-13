@@ -57,10 +57,6 @@ html {
     content: "\e032"
 }
 
-marquee {
-    display: none !important
-}
-
 #special {
     position: fixed;
     width: 100%;

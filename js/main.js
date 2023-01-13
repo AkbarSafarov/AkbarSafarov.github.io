@@ -436,7 +436,7 @@ $(document).ready(function() {
     	const newsSwiper = new Swiper(dataId, {
 	        slidesPerView: "auto",
 	        spaceBetween: 10,
-	        loop: true,
+	        loop: false,
 	        loopedSlides: 1,
 	        navigation: {
 	          nextEl: next,

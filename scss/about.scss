@@ -110,14 +110,26 @@
         right: 0;
         left: 0;
 
-        span {
+        div {
             animation: marquee 12s linear infinite;
             display: inline-block;
             padding-left: calc(100% + 58px);
+
+            span {
+                display: inline-block;
+                margin-right: 40px;
+            }
         }
     }
 
-    &-msg--two span {
+    marquee {
+        span {
+            display: inline-block;
+            margin-right: 40px;
+        }
+    }
+
+    &-msg--two div {
         animation-delay: 4s;
     }
 

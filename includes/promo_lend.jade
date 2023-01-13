@@ -62,256 +62,516 @@ include _header_promo.jade
             </svg>
         </div>
     </div>
-</div>
-<div class="about_factory">
-    <div class="block_inner">
-        <div class="about_factory__title">О заводе производителе</div>
-        <div class="about_factory__left">
-            <div class="about_factory__left-image"><img src="img/factory_image.jpg" alt=""></div>
-            <div class="about_factory__left-btn">Смотреть видео об оборудовании</div>
-            <div class="about_factory__left-video">
-                <iframe src="" frameborder="0"></iframe>
-            </div>
-        </div>
-        <div class="about_factory__right">
-            <div class="about_factory__right-title">Преимущества нашего завода</div>
-            <div class="about_factory__right-desc">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий.</div>
-            <div class="about_factory__right-list">
-                <div class="about_factory__right-item">
-                    <div class="number active">1</div>
-                    <div class="text">Преимущество первое</div>
-                </div>
-                <div class="about_factory__right-item">
-                    <div class="number">2</div>
-                    <div class="text">Преимущество первое</div>
-                </div>
-                <div class="about_factory__right-item">
-                    <div class="number">3</div>
-                    <div class="text">Преимущество первое</div>
-                </div>
-                <div class="about_factory__right-item">
-                    <div class="number">4</div>
-                    <div class="text">Преимущество первое</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="factory_infromation">
-    <div class="block_inner">
-        <div class="factory_infromation__title">КОМБИКОРМОВЫЙ ЗАВОД</div>
-    </div>
-    <div class="factory_infromation__marque">
-        <marquee class="in_mob">Комплексное решение для производства кормов, качество смешивания до 96%</marquee>
-        <p class="factory_infromation__marque-msg"><span>Комплексное решение для производства кормов, качество смешивания до 96%</span></p>
-        <p class="factory_infromation__marque-msg factory_infromation__marque-msg--two"><span>Комплексное решение для производства кормов, качество смешивания до 96%</span></p>
-    </div>
-    <div class="production_block promo_tab">
+
+    <div class="about_factory">
         <div class="block_inner">
-            <div class="production_inner">
-                <div class="mob_text">Выбрать разновидность завода</div>
-                <div class="select_dropdown btn">Мини завод</div>
+            <div class="about_factory__title">О заводе производителе</div>
+            <div class="about_factory__left">
+                <div class="about_factory__left-image"><img src="img/factory_image.jpg" alt=""></div>
+                <div class="about_factory__left-btn">Смотреть видео об оборудовании</div>
+                <div class="about_factory__left-video">
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+            </div>
+            <div class="about_factory__right">
+                <div class="about_factory__right-title">Преимущества нашего завода</div>
+                <div class="about_factory__right-desc">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий.</div>
+                <div class="about_factory__right-list">
+                    <div class="about_factory__right-item">
+                        <div class="number active">1</div>
+                        <div class="text">Преимущество первое</div>
+                    </div>
+                    <div class="about_factory__right-item">
+                        <div class="number">2</div>
+                        <div class="text">Преимущество первое</div>
+                    </div>
+                    <div class="about_factory__right-item">
+                        <div class="number">3</div>
+                        <div class="text">Преимущество первое</div>
+                    </div>
+                    <div class="about_factory__right-item">
+                        <div class="number">4</div>
+                        <div class="text">Преимущество первое</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="factory_infromation">
+        <div class="block_inner">
+            <div class="factory_infromation__title">КОМБИКОРМОВЫЙ ЗАВОД</div>
+        </div>
+        <div class="factory_infromation__marque">
+            <marquee behavior="scroll" weight="150" loop="infinity" truespeed="30" scrolldelay="30" onmouseover="this.stop()" onmouseout="this.start()" style="display: block;"><span>Комплексное решение для производства кормов, качество смешивания до 96%</span><span>Комплексное решение для производства кормов, качество смешивания до 96%</span></marquee>
+        </div>
+        <div class="production_block promo_tab">
+            <div class="block_inner">
+                <div class="production_inner">
+                    <div class="mob_text">Выбрать разновидность завода</div>
+                    <div class="select_dropdown btn">Мини завод</div>
+                    <ul class="dropdown_mob">
+                        <li class="btn btn_black active"><span>Мини завод</span></li>
+                        <li class="btn btn_black"><span>Другая разновидность</span></li>
+                        <li class="btn btn_black"><span>Тест</span></li>
+                    </ul>
+                    <div class="btn btn_white select_tab_btn">Показать</div>
+                    <ul class="tabs-title">
+                        <li class="btn btn_black active"><span>Мини завод</span></li>
+                        <li class="btn btn_black"><span>Другая разновидность</span></li>
+                        <li class="btn btn_black"><span>Тест</span></li>
+                    </ul>
+                    <div class="tabs-block">
+                        <div class="tabs-b active">
+                            <div class="swiper_arrow">
+                                <div class="swiper_arrow_btn swiper-button-prev"></div>
+                                <div class="swiper_arrow_btn swiper-button-next"></div>
+                            </div>
+                            <div class="swiper myFactorySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="item swiper-slide">
+                                        <div class="left">
+                                            <img src="img/factory_tab_image.jpg" alt="">
+                                        </div>
+                                        <div class="right">
+                                            <div class="name">Мини завод</div>
+                                            <div class="desc">Краткое описание мини завода</div>
+                                            <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
+                                            <div class="list">
+                                                <div class="list-title">Что входит:</div>
+                                                <div class="list-item">Дробилка</div>
+                                                <div class="list-item">Горизонтальный Смеситель</div>
+                                                <div class="list-item">Горизонтальный Смеситель</div>
+                                                <div class="list-item">Весовая Система</div>
+                                                <div class="list-item">Весовая Система</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item swiper-slide">
+                                        <div class="left">
+                                            <img src="img/factory_tab_image.jpg" alt="">
+                                        </div>
+                                        <div class="right">
+                                            <div class="name">Другая производительность</div>
+                                            <div class="desc">Краткое описание мини завода</div>
+                                            <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
+                                            <div class="list">
+                                                <div class="list-title">Что входит:</div>
+                                                <div class="list-item">Дробилка</div>
+                                                <div class="list-item">Горизонтальный Смеситель</div>
+                                                <div class="list-item">Горизонтальный Смеситель</div>
+                                                <div class="list-item">Весовая Система</div>
+                                                <div class="list-item">Весовая Система</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item swiper-slide">
+                                        <div class="left">
+                                            <img src="img/factory_tab_image.jpg" alt="">
+                                        </div>
+                                        <div class="right">
+                                            <div class="name">Другая производительность</div>
+                                            <div class="desc">Краткое описание мини завода</div>
+                                            <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
+                                            <div class="list">
+                                                <div class="list-title">Что входит:</div>
+                                                <div class="list-item">Дробилка</div>
+                                                <div class="list-item">Горизонтальный Смеситель</div>
+                                                <div class="list-item">Горизонтальный Смеситель</div>
+                                                <div class="list-item">Весовая Система</div>
+                                                <div class="list-item">Весовая Система</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs-b">
+                            <div class="swiper_arrow">
+                                <div class="swiper_arrow_btn swiper-button-prev"></div>
+                                <div class="swiper_arrow_btn swiper-button-next"></div>
+                            </div>
+                            <div class="swiper myFactorySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="item swiper-slide">
+                                        <div class="left">
+                                            <img src="img/factory_tab_image.jpg" alt="">
+                                        </div>
+                                        <div class="right">
+                                            <div class="name">Дальнее</div>
+                                            <div class="desc">Краткое описание мини завода</div>
+                                            <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
+                                            <div class="list">
+                                                <div class="list-title">Что входит:</div>
+                                                <div class="list-item">Дробилка</div>
+                                                <div class="list-item">Горизонтальный Смеситель</div>
+                                                <div class="list-item">Горизонтальный Смеситель</div>
+                                                <div class="list-item">Весовая Система</div>
+                                                <div class="list-item">Весовая Система</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item swiper-slide">
+                                        <div class="left">
+                                            <img src="img/factory_tab_image.jpg" alt="">
+                                        </div>
+                                        <div class="right">
+                                            <div class="name">Другая производительность</div>
+                                            <div class="desc">Краткое описание мини завода</div>
+                                            <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
+                                            <div class="list">
+                                                <div class="list-title">Что входит:</div>
+                                                <div class="list-item">Дробилка</div>
+                                                <div class="list-item">Горизонтальный Смеситель</div>
+                                                <div class="list-item">Горизонтальный Смеситель</div>
+                                                <div class="list-item">Весовая Система</div>
+                                                <div class="list-item">Весовая Система</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item swiper-slide">
+                                        <div class="left">
+                                            <img src="img/factory_tab_image.jpg" alt="">
+                                        </div>
+                                        <div class="right">
+                                            <div class="name">Другая производительность</div>
+                                            <div class="desc">Краткое описание мини завода</div>
+                                            <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
+                                            <div class="list">
+                                                <div class="list-title">Что входит:</div>
+                                                <div class="list-item">Дробилка</div>
+                                                <div class="list-item">Горизонтальный Смеситель</div>
+                                                <div class="list-item">Горизонтальный Смеситель</div>
+                                                <div class="list-item">Весовая Система</div>
+                                                <div class="list-item">Весовая Система</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs-b">
+                            <div class="swiper_arrow">
+                                <div class="swiper_arrow_btn swiper-button-prev"></div>
+                                <div class="swiper_arrow_btn swiper-button-next"></div>
+                            </div>
+                            <div class="swiper myFactorySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="item swiper-slide">
+                                        <div class="left">
+                                            <img src="img/factory_tab_image.jpg" alt="">
+                                        </div>
+                                        <div class="right">
+                                            <div class="name">Мини завод</div>
+                                            <div class="desc">Краткое описание мини завода</div>
+                                            <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
+                                            <div class="list">
+                                                <div class="list-title">Что входит:</div>
+                                                <div class="list-item">Дробилка</div>
+                                                <div class="list-item">Горизонтальный Смеситель</div>
+                                                <div class="list-item">Горизонтальный Смеситель</div>
+                                                <div class="list-item">Весовая Система</div>
+                                                <div class="list-item">Весовая Система</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item swiper-slide">
+                                        <div class="left">
+                                            <img src="img/factory_tab_image.jpg" alt="">
+                                        </div>
+                                        <div class="right">
+                                            <div class="name">Другая производительность</div>
+                                            <div class="desc">Краткое описание мини завода</div>
+                                            <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
+                                            <div class="list">
+                                                <div class="list-title">Что входит:</div>
+                                                <div class="list-item">Дробилка</div>
+                                                <div class="list-item">Горизонтальный Смеситель</div>
+                                                <div class="list-item">Горизонтальный Смеситель</div>
+                                                <div class="list-item">Весовая Система</div>
+                                                <div class="list-item">Весовая Система</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item swiper-slide">
+                                        <div class="left">
+                                            <img src="img/factory_tab_image.jpg" alt="">
+                                        </div>
+                                        <div class="right">
+                                            <div class="name">Другая производительность</div>
+                                            <div class="desc">Краткое описание мини завода</div>
+                                            <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
+                                            <div class="list">
+                                                <div class="list-title">Что входит:</div>
+                                                <div class="list-item">Дробилка</div>
+                                                <div class="list-item">Горизонтальный Смеситель</div>
+                                                <div class="list-item">Горизонтальный Смеситель</div>
+                                                <div class="list-item">Весовая Система</div>
+                                                <div class="list-item">Весовая Система</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="advantages">
+            <div class="block_inner">
+                <div class="advantages__title">Преимущества завода</div>
+                <div class="advantages__list">
+                    <div class="advantages__list-item">
+                        <div class="number">1</div>
+                        <div class="text">Преимущество первое</div>
+                    </div>
+                    <div class="advantages__list-item">
+                        <div class="number">2</div>
+                        <div class="text">Преимущество второе</div>
+                    </div>
+                    <div class="advantages__list-item">
+                        <div class="number">3</div>
+                        <div class="text">Преимущество первое</div>
+                    </div>
+                    <div class="advantages__list-item">
+                        <div class="number">4</div>
+                        <div class="text">Преимущество первое</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overview_block">
+        <div class="block_inner">
+            <div class="overview_block__left">
+                <div class="overview_block__left-title">Обзор оборудования</div>
+                <div class="overview_block__left-video">
+                    <div class="image"><img src="img/overimage.jpg" alt=""></div>
+                </div>
+            </div>
+            <div class="overview_block__right">
+                <div class="overview_block__right-title">Другие обзоры</div>
+                <div class="overview_block__list">
+                    <div class="overview_block__list-item">
+                        <div class="video">
+                            <img src="img/overviewimage2.jpg" alt="">
+                        </div>
+                        <div class="title">Примерное название видео</div>
+                        <div class="desc">Примерное краткое описание видеоролика на сайте компании</div>
+                        <div class="iframe_video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/EUX6lXTX9zQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="overview_block__list-item">
+                        <div class="video">
+                            <img src="img/overviewimage3.jpg" alt="">
+                        </div>
+                        <div class="title">Примерное название видео</div>
+                        <div class="desc">Примерное краткое описание видеоролика на сайте компании</div>
+                        <div class="iframe_video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/EUX6lXTX9zQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="overview_block__list-item">
+                        <div class="video">
+                            <img src="img/overviewimage3.jpg" alt="">
+                        </div>
+                        <div class="title">Примерное название видео</div>
+                        <div class="desc">Примерное краткое описание видеоролика на сайте компании</div>
+                        <div class="iframe_video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/EUX6lXTX9zQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mini_factory">
+        <div class="block_inner">
+            <div class="mini_factory__title">Мини-комбикормовый завод</div>
+            <div class="mini_factory__desc">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий.</div>
+            <a href="#" class="mini_factory__btn">Откликнуться</a>
+        </div>
+    </div>
+    <div class="solutions_block">
+        <div class="block_inner">
+            <div class="solutions_block__title">Решения и возможности</div>
+            <div class="solutions_block__desc">В рамках площадки можно будет принять участие в мастер-классах, например, узнать, что такое молекулярная кухня и как её готовить, или попробовать себя в кондитерской росписи, приготовить сыр-косичку или сырный трюфель, собрать улей и многое другое.</div>
+            <div class="solutions_block__list">
+                <div class="solutions_block__list-item">
+                    <div class="icon"></div>
+                    <div class="text">Поставка оборудования</div>
+                </div>
+                <div class="solutions_block__list-item">
+                    <div class="icon"></div>
+                    <div class="text">Монтаж оборудования</div>
+                </div>
+                <div class="solutions_block__list-item">
+                    <div class="icon"></div>
+                    <div class="text">Запуск оборудования</div>
+                </div>
+                <div class="solutions_block__list-item">
+                    <div class="icon"></div>
+                    <div class="text">Работы под ключ</div>
+                </div>
+                <div class="solutions_block__list-item">
+                    <div class="icon"></div>
+                    <div class="text">Сервисная поддержка</div>
+                </div>
+                <div class="solutions_block__list-item">
+                    <div class="icon"></div>
+                    <div class="text">Наличие гарантии</div>
+                </div>
+                <div class="solutions_block__list-item">
+                    <div class="icon"></div>
+                    <div class="text">Сделаем под ваше помещение</div>
+                </div>
+                <div class="solutions_block__list-item">
+                    <div class="icon"></div>
+                    <div class="text">Сделаем под ваши пожелания</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offer_block">
+        <div class="offer_block__title">
+            <div class="offer_block__title-text">Специальное предложение</div>
+        </div>
+        <div class="block_inner">
+            <div class="offer_block__left">
+                <div class="offer_block__left-title">Мини завод</div>
+                <div class="offer_block__left-body">
+                    <ul>
+                        <li>Производительность - 150-300кг/час</li>
+                        <li>Для хозяйств 20-120 голов</li>
+                        <li>Однородность смешивания 94-97%</li>
+                        <li>Невыгружаемый остаток 0,3кг</li>
+                        <li>Смешивание "сухих и жидких" компонентов</li>
+                        <li>Мощность 15,5 кВт</li>
+                        <li>Электропитание 220В/380В</li>
+                        <li>Вес 110кг+280кг</li>
+                        <li>Срок службы оборудования 10 лет</li>
+                        <li>Гарантия 1 год</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="offer_block__center">
+                <div class="image">
+                    <img src="img/offer_image.jpg" alt="">
+                </div>
+            </div>
+            <div class="offer_block__right">
+                <div class="offer_block__right-title">Отправьте заявку и наш специалист свяжется с вами</div>
+                <form action="" class="form_block_offer">
+                    <div class="field name">
+                        <input type="text" placeholder="Имя*" required>
+                    </div>
+                    <div class="field phone">
+                        <input type="text" placeholder="Телефон*" required>
+                    </div>
+                    <div class="field submit">
+                        <input type="submit" class="btn">
+                    </div>
+                </form>
+                <div class="police">Я даю согласие на <a href="#">обработку персональных данных</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="projects_block">
+        <div class="block_inner">
+            <div class="projects_block__header">
+                <div class="projects_block__header-title">Реализованые проекты</div>
+                <a href="#" class="projects_block__header-link more-link">Все проекты</a>
+            </div>
+            <div class="projects_block__tabs">
+                <div class="mob_text">Выберите сферу производства</div>
+                <div class="select_dropdown btn">Проектирование</div>
                 <ul class="dropdown_mob">
-                    <li class="btn btn_black active"><span>Мини завод</span></li>
-                    <li class="btn btn_black"><span>Другая разновидность</span></li>
-                    <li class="btn btn_black"><span>Тест</span></li>
+                    <li class="btn btn_select active"><span>Животноводство</span></li>
+                    <li class="btn btn_select"><span>Растениеводство</span></li>
+                    <li class="btn btn_select"><span>Переработка</span></li>
                 </ul>
-                <div class="btn btn_white select_tab_btn">Показать</div>
-                <ul class="tabs-title">
-                    <li class="btn btn_black active"><span>Мини завод</span></li>
-                    <li class="btn btn_black"><span>Другая разновидность</span></li>
-                    <li class="btn btn_black"><span>Тест</span></li>
+                <div class="btn btn_orange select_tab_btn">Показать</div>
+                <ul class="projects_block__tabs-ul tabs-title">
+                    <li class="btn btn_black active"><span>Животноводство</span></li>
+                    <li class="btn btn_black"><span>Растениеводство</span></li>
+                    <li class="btn btn_black"><span>Переработка</span></li>
                 </ul>
                 <div class="tabs-block">
-                    <div class="tabs-b active">
-                        <div class="swiper_arrow">
+                    <div class="tabs-b projects_block__tabs-body active">
+                        <div class="slider_wr">
                             <div class="swiper_arrow_btn swiper-button-prev"></div>
                             <div class="swiper_arrow_btn swiper-button-next"></div>
-                        </div>
-                        <div class="swiper myFactorySwiper">
-                            <div class="swiper-wrapper">
-                                <div class="item swiper-slide">
-                                    <div class="left">
-                                        <img src="img/factory_tab_image.jpg" alt="">
-                                    </div>
-                                    <div class="right">
-                                        <div class="name">Мини завод</div>
-                                        <div class="desc">Краткое описание мини завода</div>
-                                        <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-                                        <div class="list">
-                                            <div class="list-title">Что входит:</div>
-                                            <div class="list-item">Дробилка</div>
-                                            <div class="list-item">Горизонтальный Смеситель</div>
-                                            <div class="list-item">Горизонтальный Смеситель</div>
-                                            <div class="list-item">Весовая Система</div>
-                                            <div class="list-item">Весовая Система</div>
+                            <div class="swiper projectSlider">
+                                <div class="swiper-wrapper">
+                                    <div class="projects_block__tabs-item swiper-slide">
+                                        <div class="top">
+                                            <img src="img/project_image.jpg" alt="">
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="title">Минизавод в новосибирске под ключ</div>
+                                            <a href="#" class="more-link">Подробнее</a>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="item swiper-slide">
-                                    <div class="left">
-                                        <img src="img/factory_tab_image.jpg" alt="">
-                                    </div>
-                                    <div class="right">
-                                        <div class="name">Другая производительность</div>
-                                        <div class="desc">Краткое описание мини завода</div>
-                                        <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-                                        <div class="list">
-                                            <div class="list-title">Что входит:</div>
-                                            <div class="list-item">Дробилка</div>
-                                            <div class="list-item">Горизонтальный Смеситель</div>
-                                            <div class="list-item">Горизонтальный Смеситель</div>
-                                            <div class="list-item">Весовая Система</div>
-                                            <div class="list-item">Весовая Система</div>
+                                    <div class="projects_block__tabs-item swiper-slide">
+                                        <div class="top">
+                                            <img src="img/project_image.jpg" alt="">
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="title">Минизавод в новосибирске под ключ</div>
+                                            <a href="#" class="more-link">Подробнее</a>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="item swiper-slide">
-                                    <div class="left">
-                                        <img src="img/factory_tab_image.jpg" alt="">
+                                    <div class="projects_block__tabs-item swiper-slide">
+                                        <div class="top">
+                                            <img src="img/project_image.jpg" alt="">
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="title">Минизавод в новосибирске под ключ</div>
+                                            <a href="#" class="more-link">Подробнее</a>
+                                        </div>
                                     </div>
-                                    <div class="right">
-                                        <div class="name">Другая производительность</div>
-                                        <div class="desc">Краткое описание мини завода</div>
-                                        <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-                                        <div class="list">
-                                            <div class="list-title">Что входит:</div>
-                                            <div class="list-item">Дробилка</div>
-                                            <div class="list-item">Горизонтальный Смеситель</div>
-                                            <div class="list-item">Горизонтальный Смеситель</div>
-                                            <div class="list-item">Весовая Система</div>
-                                            <div class="list-item">Весовая Система</div>
+                                    <div class="projects_block__tabs-item swiper-slide">
+                                        <div class="top">
+                                            <img src="img/project_image.jpg" alt="">
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="title">Минизавод в новосибирске под ключ</div>
+                                            <a href="#" class="more-link">Подробнее</a>
+                                        </div>
+                                    </div>
+                                    <div class="projects_block__tabs-item swiper-slide">
+                                        <div class="top">
+                                            <img src="img/project_image.jpg" alt="">
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="title">Минизавод в новосибирске под ключ</div>
+                                            <a href="#" class="more-link">Подробнее</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="tabs-b">
-                        <div class="swiper_arrow">
-                            <div class="swiper_arrow_btn swiper-button-prev"></div>
-                            <div class="swiper_arrow_btn swiper-button-next"></div>
-                        </div>
-                        <div class="swiper myFactorySwiper">
-                            <div class="swiper-wrapper">
-                                <div class="item swiper-slide">
-                                    <div class="left">
-                                        <img src="img/factory_tab_image.jpg" alt="">
-                                    </div>
-                                    <div class="right">
-                                        <div class="name">Дальнее</div>
-                                        <div class="desc">Краткое описание мини завода</div>
-                                        <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-                                        <div class="list">
-                                            <div class="list-title">Что входит:</div>
-                                            <div class="list-item">Дробилка</div>
-                                            <div class="list-item">Горизонтальный Смеситель</div>
-                                            <div class="list-item">Горизонтальный Смеситель</div>
-                                            <div class="list-item">Весовая Система</div>
-                                            <div class="list-item">Весовая Система</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item swiper-slide">
-                                    <div class="left">
-                                        <img src="img/factory_tab_image.jpg" alt="">
-                                    </div>
-                                    <div class="right">
-                                        <div class="name">Другая производительность</div>
-                                        <div class="desc">Краткое описание мини завода</div>
-                                        <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-                                        <div class="list">
-                                            <div class="list-title">Что входит:</div>
-                                            <div class="list-item">Дробилка</div>
-                                            <div class="list-item">Горизонтальный Смеситель</div>
-                                            <div class="list-item">Горизонтальный Смеситель</div>
-                                            <div class="list-item">Весовая Система</div>
-                                            <div class="list-item">Весовая Система</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item swiper-slide">
-                                    <div class="left">
-                                        <img src="img/factory_tab_image.jpg" alt="">
-                                    </div>
-                                    <div class="right">
-                                        <div class="name">Другая производительность</div>
-                                        <div class="desc">Краткое описание мини завода</div>
-                                        <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-                                        <div class="list">
-                                            <div class="list-title">Что входит:</div>
-                                            <div class="list-item">Дробилка</div>
-                                            <div class="list-item">Горизонтальный Смеситель</div>
-                                            <div class="list-item">Горизонтальный Смеситель</div>
-                                            <div class="list-item">Весовая Система</div>
-                                            <div class="list-item">Весовая Система</div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="tabs-b projects_block__tabs-body">
+                        <div class="projects_block__tabs-item">
+                            <div class="top">
+                                <img src="img/project_image.jpg" alt="">
+                            </div>
+                            <div class="bottom">
+                                <div class="title">Минизавод в новосибирске под ключ</div>
+                                <a href="#" class="more-link">Подробнее</a>
                             </div>
                         </div>
                     </div>
-                    <div class="tabs-b">
-                        <div class="swiper_arrow">
-                            <div class="swiper_arrow_btn swiper-button-prev"></div>
-                            <div class="swiper_arrow_btn swiper-button-next"></div>
-                        </div>
-                        <div class="swiper myFactorySwiper">
-                            <div class="swiper-wrapper">
-                                <div class="item swiper-slide">
-                                    <div class="left">
-                                        <img src="img/factory_tab_image.jpg" alt="">
-                                    </div>
-                                    <div class="right">
-                                        <div class="name">Мини завод</div>
-                                        <div class="desc">Краткое описание мини завода</div>
-                                        <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-                                        <div class="list">
-                                            <div class="list-title">Что входит:</div>
-                                            <div class="list-item">Дробилка</div>
-                                            <div class="list-item">Горизонтальный Смеситель</div>
-                                            <div class="list-item">Горизонтальный Смеситель</div>
-                                            <div class="list-item">Весовая Система</div>
-                                            <div class="list-item">Весовая Система</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item swiper-slide">
-                                    <div class="left">
-                                        <img src="img/factory_tab_image.jpg" alt="">
-                                    </div>
-                                    <div class="right">
-                                        <div class="name">Другая производительность</div>
-                                        <div class="desc">Краткое описание мини завода</div>
-                                        <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-                                        <div class="list">
-                                            <div class="list-title">Что входит:</div>
-                                            <div class="list-item">Дробилка</div>
-                                            <div class="list-item">Горизонтальный Смеситель</div>
-                                            <div class="list-item">Горизонтальный Смеситель</div>
-                                            <div class="list-item">Весовая Система</div>
-                                            <div class="list-item">Весовая Система</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item swiper-slide">
-                                    <div class="left">
-                                        <img src="img/factory_tab_image.jpg" alt="">
-                                    </div>
-                                    <div class="right">
-                                        <div class="name">Другая производительность</div>
-                                        <div class="desc">Краткое описание мини завода</div>
-                                        <div class="body">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий. </div>
-                                        <div class="list">
-                                            <div class="list-title">Что входит:</div>
-                                            <div class="list-item">Дробилка</div>
-                                            <div class="list-item">Горизонтальный Смеситель</div>
-                                            <div class="list-item">Горизонтальный Смеситель</div>
-                                            <div class="list-item">Весовая Система</div>
-                                            <div class="list-item">Весовая Система</div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="tabs-b projects_block__tabs-body">
+                        <div class="projects_block__tabs-item">
+                            <div class="top">
+                                <img src="img/project_image.jpg" alt="">
+                            </div>
+                            <div class="bottom">
+                                <div class="title">Минизавод в новосибирске под ключ</div>
+                                <a href="#" class="more-link">Подробнее</a>
                             </div>
                         </div>
                     </div>
@@ -319,291 +579,30 @@ include _header_promo.jade
             </div>
         </div>
     </div>
-    <div class="advantages">
+    <div class="clients_block">
         <div class="block_inner">
-            <div class="advantages__title">Преимущества завода</div>
-            <div class="advantages__list">
-                <div class="advantages__list-item">
-                    <div class="number">1</div>
-                    <div class="text">Преимущество первое</div>
-                </div>
-                <div class="advantages__list-item">
-                    <div class="number">2</div>
-                    <div class="text">Преимущество второе</div>
-                </div>
-                <div class="advantages__list-item">
-                    <div class="number">3</div>
-                    <div class="text">Преимущество первое</div>
-                </div>
-                <div class="advantages__list-item">
-                    <div class="number">4</div>
-                    <div class="text">Преимущество первое</div>
-                </div>
-            </div>
+            <div class="title">Наши клиенты</div>
+            <a href="" class="link">Все клиенты</a>
         </div>
-    </div>
-</div>
-<div class="overview_block">
-    <div class="block_inner">
-        <div class="overview_block__left">
-            <div class="overview_block__left-title">Обзор оборудования</div>
-            <div class="overview_block__left-video">
-                <div class="image"><img src="img/overimage.jpg" alt=""></div>
+        <div class="inner">
+            <div class="item">
+                <img src="img/sberbank.svg" alt="">
             </div>
-        </div>
-        <div class="overview_block__right">
-            <div class="overview_block__right-title">Другие обзоры</div>
-            <div class="overview_block__list">
-                <div class="overview_block__list-item">
-                    <div class="video">
-                        <img src="img/overviewimage2.jpg" alt="">
-                    </div>
-                    <div class="title">Примерное название видео</div>
-                    <div class="desc">Примерное краткое описание видеоролика на сайте компании</div>
-                    <div class="iframe_video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/EUX6lXTX9zQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="overview_block__list-item">
-                    <div class="video">
-                        <img src="img/overviewimage3.jpg" alt="">
-                    </div>
-                    <div class="title">Примерное название видео</div>
-                    <div class="desc">Примерное краткое описание видеоролика на сайте компании</div>
-                    <div class="iframe_video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/EUX6lXTX9zQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="overview_block__list-item">
-                    <div class="video">
-                        <img src="img/overviewimage3.jpg" alt="">
-                    </div>
-                    <div class="title">Примерное название видео</div>
-                    <div class="desc">Примерное краткое описание видеоролика на сайте компании</div>
-                    <div class="iframe_video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/EUX6lXTX9zQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
+            <div class="item">
+                <img src="img/gazprombank.svg" alt="">
             </div>
-        </div>
-    </div>
-</div>
-<div class="mini_factory">
-    <div class="block_inner">
-        <div class="mini_factory__title">Мини-комбикормовый завод</div>
-        <div class="mini_factory__desc">Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий.</div>
-        <a href="#" class="mini_factory__btn">Откликнуться</a>
-    </div>
-</div>
-<div class="solutions_block">
-    <div class="block_inner">
-        <div class="solutions_block__title">Решения и возможности</div>
-        <div class="solutions_block__desc">В рамках площадки можно будет принять участие в мастер-классах, например, узнать, что такое молекулярная кухня и как её готовить, или попробовать себя в кондитерской росписи, приготовить сыр-косичку или сырный трюфель, собрать улей и многое другое.</div>
-        <div class="solutions_block__list">
-            <div class="solutions_block__list-item">
-                <div class="icon"></div>
-                <div class="text">Поставка оборудования</div>
+            <div class="item">
+                <img src="img/makfa.png" alt="">
             </div>
-            <div class="solutions_block__list-item">
-                <div class="icon"></div>
-                <div class="text">Монтаж оборудования</div>
+            <div class="item">
+                <img src="img/sibir.png" alt="">
             </div>
-            <div class="solutions_block__list-item">
-                <div class="icon"></div>
-                <div class="text">Запуск оборудования</div>
+            <div class="item">
+                <img src="img/raif.png" alt="">
             </div>
-            <div class="solutions_block__list-item">
-                <div class="icon"></div>
-                <div class="text">Работы под ключ</div>
+            <div class="item">
+                <img src="img/sberbank.svg" alt="">
             </div>
-            <div class="solutions_block__list-item">
-                <div class="icon"></div>
-                <div class="text">Сервисная поддержка</div>
-            </div>
-            <div class="solutions_block__list-item">
-                <div class="icon"></div>
-                <div class="text">Наличие гарантии</div>
-            </div>
-            <div class="solutions_block__list-item">
-                <div class="icon"></div>
-                <div class="text">Сделаем под ваше помещение</div>
-            </div>
-            <div class="solutions_block__list-item">
-                <div class="icon"></div>
-                <div class="text">Сделаем под ваши пожелания</div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="offer_block">
-    <div class="offer_block__title">
-        <div class="offer_block__title-text">Специальное предложение</div>
-    </div>
-    <div class="block_inner">
-        <div class="offer_block__left">
-            <div class="offer_block__left-title">Мини завод</div>
-            <div class="offer_block__left-body">
-                <ul>
-                    <li>Производительность - 150-300кг/час</li>
-                    <li>Для хозяйств 20-120 голов</li>
-                    <li>Однородность смешивания 94-97%</li>
-                    <li>Невыгружаемый остаток 0,3кг</li>
-                    <li>Смешивание "сухих и жидких" компонентов</li>
-                    <li>Мощность 15,5 кВт</li>
-                    <li>Электропитание 220В/380В</li>
-                    <li>Вес 110кг+280кг</li>
-                    <li>Срок службы оборудования 10 лет</li>
-                    <li>Гарантия 1 год</li>
-                </ul>
-            </div>
-        </div>
-        <div class="offer_block__center">
-            <div class="image">
-                <img src="img/offer_image.jpg" alt="">
-            </div>
-        </div>
-        <div class="offer_block__right">
-            <div class="offer_block__right-title">Отправьте заявку и наш специалист свяжется с вами</div>
-            <form action="" class="form_block_offer">
-                <div class="field name">
-                    <input type="text" placeholder="Имя*" required>
-                </div>
-                <div class="field phone">
-                    <input type="text" placeholder="Телефон*" required>
-                </div>
-                <div class="field submit">
-                    <input type="submit" class="btn">
-                </div>
-            </form>
-            <div class="police">Я даю согласие на <a href="#">обработку персональных данных</a></div>
-        </div>
-    </div>
-</div>
-<div class="projects_block">
-    <div class="block_inner">
-        <div class="projects_block__header">
-            <div class="projects_block__header-title">Реализованые проекты</div>
-            <a href="#" class="projects_block__header-link more-link">Все проекты</a>
-        </div>
-        <div class="projects_block__tabs">
-            <div class="mob_text">Выберите сферу производства</div>
-            <div class="select_dropdown btn">Проектирование</div>
-            <ul class="dropdown_mob">
-                <li class="btn btn_select active"><span>Животноводство</span></li>
-                <li class="btn btn_select"><span>Растениеводство</span></li>
-                <li class="btn btn_select"><span>Переработка</span></li>
-            </ul>
-            <div class="btn btn_orange select_tab_btn">Показать</div>
-            <ul class="projects_block__tabs-ul tabs-title">
-                <li class="btn btn_black active"><span>Животноводство</span></li>
-                <li class="btn btn_black"><span>Растениеводство</span></li>
-                <li class="btn btn_black"><span>Переработка</span></li>
-            </ul>
-            <div class="tabs-block">
-                <div class="tabs-b projects_block__tabs-body active">
-                    <div class="slider_wr">
-                        <div class="swiper_arrow_btn swiper-button-prev"></div>
-                        <div class="swiper_arrow_btn swiper-button-next"></div>
-                        <div class="swiper projectSlider">
-                            <div class="swiper-wrapper">
-                                <div class="projects_block__tabs-item swiper-slide">
-                                    <div class="top">
-                                        <img src="img/project_image.jpg" alt="">
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="title">Минизавод в новосибирске под ключ</div>
-                                        <a href="#" class="more-link">Подробнее</a>
-                                    </div>
-                                </div>
-                                <div class="projects_block__tabs-item swiper-slide">
-                                    <div class="top">
-                                        <img src="img/project_image.jpg" alt="">
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="title">Минизавод в новосибирске под ключ</div>
-                                        <a href="#" class="more-link">Подробнее</a>
-                                    </div>
-                                </div>
-                                <div class="projects_block__tabs-item swiper-slide">
-                                    <div class="top">
-                                        <img src="img/project_image.jpg" alt="">
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="title">Минизавод в новосибирске под ключ</div>
-                                        <a href="#" class="more-link">Подробнее</a>
-                                    </div>
-                                </div>
-                                <div class="projects_block__tabs-item swiper-slide">
-                                    <div class="top">
-                                        <img src="img/project_image.jpg" alt="">
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="title">Минизавод в новосибирске под ключ</div>
-                                        <a href="#" class="more-link">Подробнее</a>
-                                    </div>
-                                </div>
-                                <div class="projects_block__tabs-item swiper-slide">
-                                    <div class="top">
-                                        <img src="img/project_image.jpg" alt="">
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="title">Минизавод в новосибирске под ключ</div>
-                                        <a href="#" class="more-link">Подробнее</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tabs-b projects_block__tabs-body">
-                    <div class="projects_block__tabs-item">
-                        <div class="top">
-                            <img src="img/project_image.jpg" alt="">
-                        </div>
-                        <div class="bottom">
-                            <div class="title">Минизавод в новосибирске под ключ</div>
-                            <a href="#" class="more-link">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="tabs-b projects_block__tabs-body">
-                    <div class="projects_block__tabs-item">
-                        <div class="top">
-                            <img src="img/project_image.jpg" alt="">
-                        </div>
-                        <div class="bottom">
-                            <div class="title">Минизавод в новосибирске под ключ</div>
-                            <a href="#" class="more-link">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="clients_block">
-    <div class="block_inner">
-        <div class="title">Наши клиенты</div>
-        <a href="" class="link">Все клиенты</a>
-    </div>
-    <div class="inner">
-        <div class="item">
-            <img src="img/sberbank.svg" alt="">
-        </div>
-        <div class="item">
-            <img src="img/gazprombank.svg" alt="">
-        </div>
-        <div class="item">
-            <img src="img/makfa.png" alt="">
-        </div>
-        <div class="item">
-            <img src="img/sibir.png" alt="">
-        </div>
-        <div class="item">
-            <img src="img/raif.png" alt="">
-        </div>
-        <div class="item">
-            <img src="img/sberbank.svg" alt="">
         </div>
     </div>
 </div>
