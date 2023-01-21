@@ -490,15 +490,31 @@ $(document).ready(function() {
         }
     });
 
-    const myFactorySwiper = new Swiper(".myFactorySwiper", {
-        slidesPerView: "auto",
-        loop: true,
-        loopedSlides: 1,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        }
-    });
+    // const myFactorySwiper = new Swiper(".myFactorySwiper", {
+    //     slidesPerView: "auto",
+    //     loop: true,
+    //     loopedSlides: 1,
+    //     navigation: {
+    //       nextEl: ".swiper-button-next",
+    //       prevEl: ".swiper-button-prev",
+    //     }
+    // });
+
+    $('.production_block .tabs-b').each(function(){
+    	let dataId = '.' + $(this).find('.swiper').data('id');
+    	let prev = '.' + $(this).find('.swiper-button-prev').data('prev');
+    	let next = '.' + $(this).find('.swiper-button-next').data('next');
+
+    	const myFactorySwiper = new Swiper(dataId, {
+	        slidesPerView: "auto",
+	        loop: false,
+	        loopedSlides: 1,
+	        navigation: {
+	          nextEl: next,
+	          prevEl: prev,
+	        }
+	    });
+    })
 
     const myhistoryswiper = new Swiper(".myHistorySwiper", {
         slidesPerView: 1,
@@ -515,7 +531,7 @@ $(document).ready(function() {
 
     const projectSwiper = new Swiper(".projectSlider", {
         slidesPerView: "auto",
-        loop: true,
+        loop: false,
         loopedSlides: 1,
         navigation: {
           nextEl: ".projects_block__tabs-body .swiper-button-next",
