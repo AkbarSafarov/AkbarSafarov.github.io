@@ -1311,7 +1311,11 @@ img, textarea, input, table {
         padding-top: 190px;
 
         @media all and (max-width: 1180px) {
-            padding-top: 80px;
+            padding-top: 73px;
+        }
+
+        @media all and (max-width: 999px) {
+            padding-top: 50px;
         }
     }
 }
@@ -3222,7 +3226,7 @@ img, textarea, input, table {
             }
 
             .swiper_arrow_btn {
-                display: none;
+                //display: none;
             }
 
             .item {

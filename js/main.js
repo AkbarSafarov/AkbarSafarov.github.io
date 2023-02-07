@@ -392,6 +392,8 @@ $(document).ready(function() {
 	    });
     })
 
+    const prevR = '.' + $('.reasons_slider').find('.swiper-button-prev').data('prev');
+	const nextR = '.' + $('.reasons_slider').find('.swiper-button-next').data('next');
     const reasonsSwiper = new Swiper(".reasons_slider", {
         slidesPerView: "auto",
         spaceBetween: 0,
@@ -404,14 +406,16 @@ $(document).ready(function() {
         }
     });
 
+    const prevF = '.' + $('.factory_images').find('.swiper-button-prev').data('prev');
+	const nextF = '.' + $('.factory_images').find('.swiper-button-next').data('next');
     const factorySwiper = new Swiper(".factory_images", {
         slidesPerView: "auto",
         spaceBetween: 0,
-        loop: true,
+        loop: false,
         loopedSlides: 1,
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: prevF,
+          prevEl: nextF,
         }
     });
 
@@ -429,9 +433,31 @@ $(document).ready(function() {
 
 
     $('.news_block_wr .tabs-b').each(function(){
-    	let dataId = '.' + $(this).find('.swiper').data('id');
-    	let prev = '.' + $(this).find('.swiper-button-prev').data('prev');
-    	let next = '.' + $(this).find('.swiper-button-next').data('next');
+    	// let dataId = '.' + $(this).find('.swiper').data('id');
+    	// let prev = '.' + $(this).find('.swiper-button-prev').data('prev');
+    	// let next = '.' + $(this).find('.swiper-button-next').data('next');
+
+    	// const newsSwiper = new Swiper(dataId, {
+	    //     slidesPerView: "auto",
+	    //     spaceBetween: 10,
+	    //     loop: false,
+	    //     loopedSlides: 1,
+	    //     navigation: {
+	    //       nextEl: next,
+	    //       prevEl: prev,
+	    //     },
+	    //     breakpoints: {
+	    //       640: {
+	    //         spaceBetween: 20,
+	    //       }
+	    //     }
+	    // });
+    })
+
+    function sliderNew(argument) {
+    	let dataId = '.' + $(argument).find('.swiper').data('id');
+    	let prev = '.' + $(argument).find('.swiper-button-prev').data('prev');
+    	let next = '.' + $(argument).find('.swiper-button-next').data('next');
 
     	const newsSwiper = new Swiper(dataId, {
 	        slidesPerView: "auto",
@@ -448,7 +474,11 @@ $(document).ready(function() {
 	          }
 	        }
 	    });
-    })
+    }
+
+    sliderNew('.slider_nn');
+
+    sliderNew('.slider_mer');
     
 
     const articleSwiper = new Swiper(".article_slider", {
@@ -472,11 +502,11 @@ $(document).ready(function() {
     })
 
     $('.swiper_arrow_btn.prev').on('click', function(){
-    	$(this).closest('.tabs-b').find('.swiper-button-prev').trigger('click');
+    	$(this).parents('.tabs-b.active').find('.swiper-button-prev').trigger('click');
     })
 
     $('.swiper_arrow_btn.next').on('click', function(){
-    	$(this).closest('.tabs-b').find('.swiper-button-next').trigger('click');
+    	$(this).parents('.tabs-b.active').find('.swiper-button-next').trigger('click');
     })
 
     const myswiper = new Swiper(".myProfSwiper", {

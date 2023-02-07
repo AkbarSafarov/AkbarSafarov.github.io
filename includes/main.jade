@@ -160,13 +160,10 @@ include _header_gl.jade
 					<div class="right">
 						<div class="swiper factory_images">
 							<div class="swiper_arrow">
-								<div class="swiper_arrow_btn swiper-button-prev"></div>
-								<div class="swiper_arrow_btn swiper-button-next"></div>
+								<div class="swiper_arrow_btn swiper-button-prev swiper-button-prev_f" data-prev="swiper-button-prev_f"></div>
+								<div class="swiper_arrow_btn swiper-button-next swiper-button-next_f" data-next="swiper-button-next_f"></div>
 							</div>
 							<div class="swiper-wrapper">
-								<div class="item swiper-slide">
-									<img src="files/f_slid.jpg" alt="">
-								</div>
 								<div class="item swiper-slide">
 									<img src="files/f_slid.jpg" alt="">
 								</div>
@@ -443,15 +440,17 @@ include _header_gl.jade
 						<li class="btn btn_black"><span>Мероприятия</span></li>
 					</ul>
 					<div class="tabs-block">
-						<div class="tabs-b active">
-							<div class="swiper_arrow">
+						<div class="tabs-b active slider_nn">
+							<!-- <div class="swiper_arrow">
 								<div class="swiper_arrow_btn prev"></div>
 								<div class="swiper_arrow_btn next"></div>
-							</div>
+							</div> -->
 							<div class="slider_wr">
-								<div class="swiper_arrow_btn swiper-button-prev" data-prev="swiper-button-prev"></div>
-								<div class="swiper_arrow_btn swiper-button-next" data-next="swiper-button-next"></div>
-								<div class="swiper news_slider"  data-id="news_slider">
+								<div class="swiper_arrow">
+									<div class="swiper_arrow_btn swiper-button-prev swiper-button-prev_01" data-prev="swiper-button-prev_01"></div>
+									<div class="swiper_arrow_btn swiper-button-next swiper-button-next_01" data-next="swiper-button-next_01"></div>
+								</div>
+								<div class="swiper news_slider_01"  data-id="news_slider_01">
 									<div class="swiper-wrapper">
 										<a href="" class="item swiper-slide" style="background-image: url(files/new1.jpg);">
 											<div class="name">Первая новость компании</div>
@@ -492,15 +491,17 @@ include _header_gl.jade
 								</div>
 							</div>
 						</div>
-						<div class="tabs-b">
-							<div class="swiper_arrow">
+						<div class="tabs-b slider_mer">
+							<!-- <div class="swiper_arrow">
 								<div class="swiper_arrow_btn prev"></div>
 								<div class="swiper_arrow_btn next"></div>
-							</div>
+							</div> -->
 							<div class="slider_wr">
-								<div class="swiper_arrow_btn swiper-button-prev" data-prev="swiper-button-prev"></div>
-								<div class="swiper_arrow_btn swiper-button-next" data-next="swiper-button-next"></div>
-								<div class="swiper news_slider" data-id="news_slider">
+								<div class="swiper_arrow">
+									<div class="swiper_arrow_btn swiper-button-prev swiper-button-prev_02" data-prev="swiper-button-prev_02"></div>
+									<div class="swiper_arrow_btn swiper-button-next swiper-button-next_02" data-next="swiper-button-next_02"></div>
+								</div>
+								<div class="swiper news_slider news_slider02" data-id="news_slider02">
 									<div class="swiper-wrapper">
 										<a href="" class="item swiper-slide" style="background-image: url(files/new1.jpg);">
 											<div class="name">Первая новость компании</div>
