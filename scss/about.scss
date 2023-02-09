@@ -1527,7 +1527,12 @@
             border-radius: 250px;
             cursor: pointer;
             background: url("data:image/svg+xml,%3Csvg width='13' height='8' viewBox='0 0 13 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 1L6.55796 7L1 1' stroke='%23C84014' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
-        	@media all and (max-width: 1000px) {
+        	
+            &:hover {
+                background: #C84014 url("data:image/svg+xml,%3Csvg width='13' height='8' viewBox='0 0 13 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 1L6.55796 7L1 1' fill='%23C84014'/%3E%3Cpath d='M12 1L6.55796 7L1 1' stroke='%23110E0D' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 50% no-repeat !important;
+            }
+            
+            @media all and (max-width: 1000px) {
         		display: none;
         	}
         }

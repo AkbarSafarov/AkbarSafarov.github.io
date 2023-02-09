@@ -4962,6 +4962,12 @@ $color2: #110E0D;
 			&.active {
 				border-color: $color1;
 			}
+
+			&:hover {
+				color: #fff;
+				border-color: #C84014;
+				background: #C84014;
+			}
 		}
 	}
 
