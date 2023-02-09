@@ -1867,7 +1867,7 @@
         max-width: 645px;
         left: 160px;
         position: absolute;
-        bottom: 0;
+        bottom: -96px;
         font-weight: 400;
 		font-size: 16px;
 		line-height: 19px;
@@ -1923,7 +1923,13 @@
     	&__description {
     		position: relative;
     		left: 0;
+            bottom: 0;
     		margin-top: 20px;
+            border: 1px solid #C84014;
+            border-top: 0;
+            border-bottom: 0;
+            margin-top: 0;
+            padding: 15px;
     	}
     	.swiper_arrow {
     		position: relative;

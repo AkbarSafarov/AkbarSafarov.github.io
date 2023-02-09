@@ -3180,16 +3180,25 @@ img, textarea, input, table {
             }
         }
 
+        .tabs-block {
+            position: relative;
+        }
+
         .tabs-b {
-            display: none;
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
 
             &.active {
                 display: block;
+                position: relative;
+                opacity: 1;
+                visibility: visible;
             }
         }
 
         .tabs-b {
-            position: relative;
 
             .swiper_arrow {
                 position: absolute;
