@@ -468,7 +468,7 @@ $(document).ready(function() {
 
     	const newsSwiper = new Swiper(dataId, {
 	        slidesPerView: "auto",
-	        spaceBetween: 10,
+	        spaceBetween: 0,
 	        loop: false,
 	        loopedSlides: 1,
 	        navigation: {
@@ -477,7 +477,7 @@ $(document).ready(function() {
 	        },
 	        breakpoints: {
 	          640: {
-	            spaceBetween: 20,
+	            spaceBetween: 0,
 	          }
 	        }
 	    });

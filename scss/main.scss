@@ -429,7 +429,7 @@ img, textarea, input, table {
 
     .jq-selectbox__select {
         width: 100%;
-        padding: 0;
+        padding: 0 30px 0 0;
         height: 40px;
         background: none;
         font-style: normal;
@@ -449,6 +449,10 @@ img, textarea, input, table {
         .jq-selectbox__select-text {
             width: 100% !important;
             margin: 0;
+            text-overflow: ellipsis;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
         }
 
         .jq-selectbox__trigger {
@@ -3185,16 +3189,10 @@ img, textarea, input, table {
         }
 
         .tabs-b {
-            position: absolute;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s;
+            display: none;
 
             &.active {
                 display: block;
-                position: relative;
-                opacity: 1;
-                visibility: visible;
             }
         }
 
@@ -3257,6 +3255,9 @@ img, textarea, input, table {
                 height: auto;
                 min-height: 398px;
                 border: 1px solid #fff;
+                margin-right: 20px;
+
+
 
                 div {
                     position: relative;
@@ -3301,6 +3302,7 @@ img, textarea, input, table {
                     width: 223px;
                     padding: 20px 10px;
                     min-height: 257px;
+                    margin-right: 10px;
 
                     .name {
                         font-size: 18px;

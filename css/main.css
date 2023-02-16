@@ -351,7 +351,7 @@ img, textarea, input, table {
   z-index: 30 !important; }
   .jq-selectbox.jqselect .jq-selectbox__select {
     width: 100%;
-    padding: 0;
+    padding: 0 30px 0 0;
     height: 40px;
     background: none;
     font-style: normal;
@@ -372,7 +372,12 @@ img, textarea, input, table {
     position: relative; }
     .jq-selectbox.jqselect .jq-selectbox__select .jq-selectbox__select-text {
       width: 100% !important;
-      margin: 0; }
+      margin: 0;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden; }
     .jq-selectbox.jqselect .jq-selectbox__select .jq-selectbox__trigger {
       display: none; }
     .jq-selectbox.jqselect .jq-selectbox__select:after {
@@ -2483,17 +2488,9 @@ img, textarea, input, table {
   .news_block_wr .news_inner .tabs-block {
     position: relative; }
   .news_block_wr .news_inner .tabs-b {
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s; }
+    display: none; }
     .news_block_wr .news_inner .tabs-b.active {
-      display: block;
-      position: relative;
-      opacity: 1;
-      visibility: visible; }
+      display: block; }
   .news_block_wr .news_inner .tabs-b .swiper_arrow {
     position: absolute;
     top: -84px;
@@ -2544,7 +2541,8 @@ img, textarea, input, table {
       transition: all 0.3s;
       height: auto;
       min-height: 398px;
-      border: 1px solid #fff; }
+      border: 1px solid #fff;
+      margin-right: 20px; }
       .news_block_wr .news_inner .slider_wr .item div {
         position: relative;
         z-index: 1;
@@ -2588,7 +2586,8 @@ img, textarea, input, table {
         .news_block_wr .news_inner .slider_wr .item {
           width: 223px;
           padding: 20px 10px;
-          min-height: 257px; }
+          min-height: 257px;
+          margin-right: 10px; }
           .news_block_wr .news_inner .slider_wr .item .name {
             font-size: 18px; }
           .news_block_wr .news_inner .slider_wr .item .bottom {
