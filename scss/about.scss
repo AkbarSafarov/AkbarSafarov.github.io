@@ -522,6 +522,7 @@
 
 .offer_block {
     position: relative;
+    overflow: hidden;
 
     &:after {
         position: absolute;
@@ -630,6 +631,17 @@
         background: #110E0D;
         padding: 40px 20px;
         box-sizing: border-box;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 100%;
+            bottom: 0;
+            right: -1500px;
+            background: #110E0D;
+        }
 
         &-title {
             font-weight: 700;

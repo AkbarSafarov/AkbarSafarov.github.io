@@ -826,7 +826,7 @@ $(function() {
 		    })
 
 			myMap.geoObjects.add(placemark)
-			//placemark.balloon.open()
+			placemark.balloon.open()
 			myMap.behaviors.disable('scrollZoom')
 		}
 	}

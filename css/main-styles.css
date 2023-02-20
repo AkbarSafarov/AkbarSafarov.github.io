@@ -1257,6 +1257,9 @@
       left: 22px;
       border-bottom: 0.5px solid #110E0D; }
 
+.press_page.press_page .header_wrapper {
+  background: #FBF9F9; }
+
 .press_page.press_calendar .header_wrapper .block_inner h1 span {
   color: #110E0D;
   position: relative;
